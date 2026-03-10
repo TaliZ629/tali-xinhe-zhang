@@ -1,0 +1,58 @@
+const projects = [
+  {
+    cat: "Finance · Data Analytics",
+    title: "Capital Markets Weekly Update",
+    desc: "Interactive financial dashboard with real-time market data visualization and weekly analysis reporting.",
+    link: "https://taliz629.github.io/cap_mkts_weekly_update_2-17v3/",
+    emoji: "📊",
+    gradient: "from-terracotta to-blush",
+  },
+  {
+    cat: "Finance · Chinese Market Analysis",
+    title: "Capital Markets Weekly Update (中文)",
+    desc: "Chinese-language version of the capital markets dashboard — bilingual financial reporting bridging Western and Chinese-speaking audiences.",
+    link: "https://taliz629.github.io/cap_mkts_weekly_update_2-17v3_cn/",
+    emoji: "🇨🇳",
+    gradient: "from-dusty-rose to-blush",
+  },
+  {
+    cat: "Social Media · Audience Analytics",
+    title: "Social Media Performance Dashboard",
+    desc: "A data-driven performance report analyzing organic reach, engagement rates, and audience growth across TikTok, Douyin, and Xiaohongshu.",
+    link: "https://taliz629.github.io/social_media_performance_2-18v4/",
+    emoji: "📱",
+    gradient: "from-terracotta to-blush",
+  },
+];
+
+const WorksSection = () => (
+  <section id="work" className="px-[6%] md:px-[10%] py-24 bg-background">
+    <p className="section-label">02 — Selected Work</p>
+    <h2 className="section-title">Data-Driven<br /><em>Projects</em></h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {projects.map((p) => (
+        <a
+          key={p.title}
+          href={p.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-warm-white border border-border rounded-sm overflow-hidden no-underline block hover:-translate-y-1 hover:shadow-xl transition-all group"
+        >
+          <div className={`h-[200px] overflow-hidden relative bg-gradient-to-br ${p.gradient} flex items-center justify-center`}>
+            <span className="text-5xl opacity-30">{p.emoji}</span>
+          </div>
+          <div className="p-5">
+            <p className="text-[0.65rem] tracking-[0.18em] uppercase text-terracotta mb-1.5">{p.cat}</p>
+            <h3 className="text-[1.1rem] font-medium text-deep mb-2 leading-snug">{p.title}</h3>
+            <p className="text-[0.8rem] text-light-text leading-relaxed mb-4">{p.desc}</p>
+            <span className="text-[0.72rem] tracking-[0.12em] uppercase text-terracotta flex items-center gap-1.5">
+              View Live Project <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+);
+
+export default WorksSection;
