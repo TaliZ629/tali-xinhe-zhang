@@ -6,9 +6,6 @@ const HeroSection = () => {
       <div className="flex flex-col md:flex-row items-center md:items-start justify-between px-[6%] md:px-[10%] py-[8%]">
         {/* Left: Text */}
         <div className="max-w-[60%] max-md:max-w-full flex flex-col justify-center animate-fade-up" style={{ animationDelay: "0.2s" }}>
-          <p className="text-[0.72rem] tracking-[0.2em] uppercase text-terracotta mb-5">
-            Portfolio · New York City
-          </p>
           <h1 className="font-display text-[clamp(3.5rem,6vw,5.5rem)] font-normal leading-[1.05] text-deep mb-1">
             Xinhe <em className="italic text-terracotta">(Tali)</em> Zhang
           </h1>
