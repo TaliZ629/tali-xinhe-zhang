@@ -95,6 +95,7 @@ const volunteerExperiences: VolunteerExp[] = [
     bullets: [
       "Assisted in filming a one-hour interview with Buddhism Master Xinchuan Wang introducing Buddhism across regions including mainland China and India",
     ],
+    media: { type: "image", src: volunteerXinchuan, alt: "Interview with Xinchuan Wang" },
   },
 ];
 
