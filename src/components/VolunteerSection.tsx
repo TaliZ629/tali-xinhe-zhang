@@ -1,6 +1,7 @@
 import volunteerOutreach from "@/assets/volunteer-outreach.jpg";
 import volunteerTedx from "@/assets/volunteer-tedx.jpg";
 import volunteerWrsa from "@/assets/volunteer-wrsa.jpg";
+import volunteerXinchuan from "@/assets/volunteer-xinchuan.jpg";
 
 type MediaItem = { type: "image"; src: string; alt: string } | { type: "video"; src: string };
 
