@@ -11,29 +11,17 @@ const AboutSection = () => (
           Currently based in New York City, I bring a unique blend of analytical thinking and creative execution. Whether auditing $82M in purchase orders, producing corporate videos, or growing social media channels across platforms, I approach every challenge with curiosity and rigor.
         </p>
       </div>
-      <div className="space-y-6">
-        <div className="bg-warm-white border border-border rounded-sm p-7">
-          <h4 className="text-[0.7rem] tracking-[0.2em] uppercase text-terracotta mb-4">Education</h4>
-          <div className="space-y-4">
-            <div className="pb-4 border-b border-border">
-              <p className="text-[0.88rem] font-medium text-deep">New York University</p>
-              <p className="text-[0.8rem] text-medium">M.S. Integrated Marketing</p>
-              <p className="text-[0.72rem] text-light-text">2025 – 2026</p>
-            </div>
-            <div>
-              <p className="text-[0.88rem] font-medium text-deep">Beijing Normal University-Hong Kong Baptist University</p>
-              <p className="text-[0.8rem] text-medium">B.A. Film, Television & Digital Media</p>
-              <p className="text-[0.72rem] text-light-text">2015 – 2019</p>
-            </div>
-          </div>
-        </div>
-        <div className="bg-warm-white border border-border rounded-sm p-7">
-          <h4 className="text-[0.7rem] tracking-[0.2em] uppercase text-terracotta mb-4">Skills</h4>
-          <div className="flex flex-wrap gap-2">
-            {["SQL", "Python", "Tableau", "Google Analytics", "Adobe Creative Cloud", "SAP", "Bilingual EN/CH", "Data Visualization"].map(tag => (
-              <span key={tag} className="bg-tag-bg text-medium text-[0.73rem] px-3 py-1 rounded-sm border border-border">{tag}</span>
-            ))}
-          </div>
+      <div className="bg-warm-white border border-border rounded-sm p-7">
+        <h4 className="text-[0.7rem] tracking-[0.2em] uppercase text-terracotta mb-4">Skills</h4>
+        <div className="flex flex-wrap gap-2">
+          {[
+            "Python", "Tableau", "SQL", "Google Analytics", "Excel",
+            "Adobe Creative Cloud", "ServiceNow", "Ivalua",
+            "Microsoft Dynamics 365", "SharePoint", "Google Workspace",
+            "Bilingual EN/CH", "Data Visualization", "Financial Analysis",
+          ].map(tag => (
+            <span key={tag} className="bg-tag-bg text-medium text-[0.73rem] px-3 py-1 rounded-sm border border-border">{tag}</span>
+          ))}
         </div>
       </div>
     </div>

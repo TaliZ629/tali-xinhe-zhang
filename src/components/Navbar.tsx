@@ -3,9 +3,10 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 const navLinks = [
   { href: "#about", label: "About" },
-  { href: "#work", label: "Work" },
-  { href: "#social", label: "Social" },
+  { href: "#education", label: "Education" },
   { href: "#experience", label: "Experience" },
+  { href: "#work", label: "Projects" },
+  { href: "#research", label: "Research" },
   { href: "#contact", label: "Contact" },
 ];
 

@@ -27,7 +27,7 @@ const projects = [
 
 const WorksSection = () => (
   <section id="work" className="px-[6%] md:px-[10%] py-24 bg-background">
-    <p className="section-label">02 — Selected Work</p>
+    <p className="section-label">04 — Selected Work</p>
     <h2 className="section-title">Data-Driven<br /><em>Projects</em></h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {projects.map((p) => (
