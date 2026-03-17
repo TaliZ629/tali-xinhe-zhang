@@ -1,4 +1,20 @@
-const volunteerExperiences = [
+import volunteerOutreach from "@/assets/volunteer-outreach.jpg";
+import volunteerTedx from "@/assets/volunteer-tedx.jpg";
+import volunteerWrsa from "@/assets/volunteer-wrsa.jpg";
+
+type MediaItem = { type: "image"; src: string; alt: string } | { type: "video"; src: string };
+
+interface VolunteerExp {
+  date: string;
+  org: string;
+  location: string;
+  role: string;
+  subtitle: string;
+  bullets: string[];
+  media?: MediaItem;
+}
+
+const volunteerExperiences: VolunteerExp[] = [
   {
     date: "November 2021",
     org: "Community Outreach Program",
@@ -10,6 +26,7 @@ const volunteerExperiences = [
       "Shared How to Make an Apple Pie and See the World to help students appreciate the beauty of small moments and expand their imagination beyond their environment",
       "Led interactive discussions, encouraged curiosity, and helped foster confidence, emotional expression, and a sense of connection to the broader world",
     ],
+    media: { type: "image", src: volunteerOutreach, alt: "Community Outreach Program storytelling session" },
   },
   {
     date: "October 2018",
@@ -21,6 +38,7 @@ const volunteerExperiences = [
       "Edited TEDx TurtleRock event videos and assisted the organizer in designing the event setup and activities",
       "Created digital and print materials including posters, flyers, presentations, and motion graphics",
     ],
+    media: { type: "image", src: volunteerTedx, alt: "TEDxTurtleRock: Ideas Unchained group photo" },
   },
   {
     date: "September 2018",
@@ -43,6 +61,7 @@ const volunteerExperiences = [
       "Selected as one of 18 volunteers from an international pool of 14,000 applicants for the largest annual WRSA conference, with 800+ attendees and 50+ leading executives, entrepreneurs, and scholars",
       "Served as media group assistant, fielding questions and providing materials for guests; conference coverage published on CCTV, Xinhua, China Daily, Sohu, Sina, and China.com",
     ],
+    media: { type: "image", src: volunteerWrsa, alt: "WRSA & CCG Beijing Forum volunteer group photo" },
   },
   {
     date: "May 2018",
@@ -53,6 +72,7 @@ const volunteerExperiences = [
     bullets: [
       "Set up the shooting booth in the arena and operated a camera transmitting live moving images to the big screen on stage for all commencement attendees",
     ],
+    media: { type: "video", src: "/videos/occ-commencement.mp4" },
   },
   {
     date: "May 2018",
@@ -97,6 +117,25 @@ const VolunteerSection = () => (
                 <li key={j} className="text-[0.8rem] text-medium leading-[1.7]">{b}</li>
               ))}
             </ul>
+            {item.media && (
+              <div className="mt-4 rounded overflow-hidden border border-border">
+                {item.media.type === "image" ? (
+                  <img
+                    src={item.media.src}
+                    alt={item.media.alt}
+                    className="w-full max-h-[300px] object-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <video
+                    src={item.media.src}
+                    controls
+                    className="w-full max-h-[300px] bg-black"
+                    preload="metadata"
+                  />
+                )}
+              </div>
+            )}
           </div>
         </div>
       ))}
