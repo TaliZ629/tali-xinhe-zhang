@@ -17,9 +17,8 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/92 backdrop-blur-xl border-b border-border px-[6%] flex items-center justify-between h-16">
-        <a href="#" className="flex items-center gap-2.5 text-deep font-medium tracking-wide text-lg no-underline">
+        <a href="#" className="flex items-center gap-2.5 no-underline">
           <img src={profilePhoto} alt="Tali Zhang" className="w-9 h-9 rounded-full object-cover object-top border-2 border-blush flex-shrink-0" />
-          Tali Zhang
         </a>
         <ul className="hidden md:flex gap-10 list-none">
           {navLinks.map(({ href, label }) => (
