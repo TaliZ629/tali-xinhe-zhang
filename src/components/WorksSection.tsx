@@ -4,18 +4,21 @@ const projects = [
     title: "Capital Markets Weekly Update",
     desc: "A weekly bilingual interactive financial dashboard with real-time market data visualization and analysis reporting.",
     link: "https://capital-markets-weekly.lovable.app/",
+    linkLabel: "View Live Project",
   },
   {
     cat: "Social Media · Audience Analytics",
     title: "Social Media Performance Dashboard",
     desc: "A data-driven performance report analyzing organic reach, engagement rates, and audience growth across TikTok, Douyin, and Xiaohongshu.",
     link: "https://taliz629.github.io/social_media_performance_2-18v4/",
+    linkLabel: "View Live Project",
   },
   {
     cat: "Video Production · Documentary",
     title: "The Food Riders of OCC",
     desc: "Edited a 3-minute documentary on a campus organization that takes excess food from the Orange Coast College cafeteria and delivers it to local food pantries serving Orange County's homeless population via bicycles and trailers.",
     link: "https://www.youtube.com/embed/nl1PePNogak",
+    linkLabel: "Watch on YouTube",
   },
 ];
 
@@ -36,7 +39,7 @@ const WorksSection = () => (
           <h3 className="text-[1.1rem] font-medium text-deep mb-2 leading-snug">{p.title}</h3>
           <p className="text-[0.8rem] text-light-text leading-relaxed mb-4">{p.desc}</p>
           <span className="text-[0.72rem] tracking-[0.12em] uppercase text-terracotta flex items-center gap-1.5">
-            View Live Project <span className="group-hover:translate-x-1 transition-transform">→</span>
+            {p.linkLabel} <span className="group-hover:translate-x-1 transition-transform">→</span>
           </span>
         </a>
       ))}
