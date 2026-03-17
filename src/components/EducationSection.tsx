@@ -14,7 +14,7 @@ const education = [
     details: "",
   },
   {
-    school: "Orange Coast College (OCC)",
+    school: "Orange Coast College",
     degree: "Film & Television Production Certificate",
     location: "Costa Mesa, CA",
     date: "",
