@@ -6,12 +6,6 @@ const projects = [
     link: "https://capital-markets-weekly.lovable.app/",
   },
   {
-    cat: "Finance · Chinese Market Analysis",
-    title: "Capital Markets Weekly Update (中文)",
-    desc: "Chinese-language version of the capital markets dashboard — bilingual financial reporting bridging Western and Chinese-speaking audiences.",
-    link: "https://taliz629.github.io/cap_mkts_weekly_update_2-17v3_cn/",
-  },
-  {
     cat: "Social Media · Audience Analytics",
     title: "Social Media Performance Dashboard",
     desc: "A data-driven performance report analyzing organic reach, engagement rates, and audience growth across TikTok, Douyin, and Xiaohongshu.",
