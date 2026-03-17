@@ -17,8 +17,9 @@ const projects = [
     cat: "Video Production · Documentary",
     title: "The Food Riders of OCC",
     desc: "Edited a 3-minute documentary on a campus organization that takes excess food from the Orange Coast College cafeteria and delivers it to local food pantries serving Orange County's homeless population via bicycles and trailers.",
-    link: "https://www.youtube.com/embed/nl1PePNogak",
-    linkLabel: "Watch on YouTube",
+    link: "https://youtu.be/nl1PePNogak",
+    linkLabel: "Watch Video",
+    thumbnail: "https://img.youtube.com/vi/nl1PePNogak/hqdefault.jpg",
   },
 ];
 
@@ -33,14 +34,31 @@ const WorksSection = () => (
           href={p.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-warm-white border border-border rounded-sm overflow-hidden no-underline block hover:-translate-y-1 hover:shadow-xl transition-all group p-6"
+          className="bg-warm-white border border-border rounded-sm overflow-hidden no-underline block hover:-translate-y-1 hover:shadow-xl transition-all group"
         >
-          <p className="text-[0.65rem] tracking-[0.18em] uppercase text-terracotta mb-1.5">{p.cat}</p>
-          <h3 className="text-[1.1rem] font-medium text-deep mb-2 leading-snug">{p.title}</h3>
-          <p className="text-[0.8rem] text-light-text leading-relaxed mb-4">{p.desc}</p>
-          <span className="text-[0.72rem] tracking-[0.12em] uppercase text-terracotta flex items-center gap-1.5">
-            {p.linkLabel} <span className="group-hover:translate-x-1 transition-transform">→</span>
-          </span>
+          {p.thumbnail && (
+            <div className="relative w-full aspect-video overflow-hidden bg-muted">
+              <img
+                src={p.thumbnail}
+                alt={p.title}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-deep/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="bg-background/90 text-deep text-[0.75rem] tracking-[0.1em] uppercase px-4 py-2 rounded-sm">
+                  ▶ Play
+                </span>
+              </div>
+            </div>
+          )}
+          <div className="p-6">
+            <p className="text-[0.65rem] tracking-[0.18em] uppercase text-terracotta mb-1.5">{p.cat}</p>
+            <h3 className="text-[1.1rem] font-medium text-deep mb-2 leading-snug">{p.title}</h3>
+            <p className="text-[0.8rem] text-light-text leading-relaxed mb-4">{p.desc}</p>
+            <span className="text-[0.72rem] tracking-[0.12em] uppercase text-terracotta flex items-center gap-1.5">
+              {p.linkLabel} ↗ <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </span>
+          </div>
         </a>
       ))}
     </div>
