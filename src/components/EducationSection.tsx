@@ -11,7 +11,7 @@ const education = [
     degree: "B.S. Design, Visual Communication Design",
     location: "Columbus, OH",
     date: "",
-    details: "Visual Communication Design, Statistics, MicroEconomics",
+    details: "",
   },
   {
     school: "Orange Coast College (OCC)",
