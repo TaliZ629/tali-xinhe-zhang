@@ -25,7 +25,7 @@ const education = [
     degree: "Visual Communication Exchange Program",
     location: "Darmstadt, Germany",
     date: "",
-    details: "Production & Realization IV / Computer",
+    details: "",
   },
 ];
 
