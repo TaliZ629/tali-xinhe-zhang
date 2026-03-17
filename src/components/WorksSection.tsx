@@ -2,7 +2,7 @@ const projects = [
   {
     cat: "Finance · Data Analytics",
     title: "Capital Markets Weekly Update",
-    desc: "Bilingual interactive financial dashboard with real-time market data visualization and weekly analysis reporting.",
+    desc: "A weekly bilingual interactive financial dashboard with real-time market data visualization and analysis reporting.",
     link: "https://capital-markets-weekly.lovable.app/",
   },
   {
