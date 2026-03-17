@@ -4,28 +4,28 @@ const education = [
     degree: "M.S. Engineering, Management of Technology (STEM)",
     location: "Brooklyn, NY",
     date: "09/2025 – 05/2027",
-    details: "Business Analytics, Data Visualization for Business Intelligence, Economics & Strategy, Marketing",
+    details: "",
   },
   {
     school: "The Ohio State University",
     degree: "B.S. Design, Visual Communication Design",
     location: "Columbus, OH",
     date: "",
-    details: "Visual Communication Design, Statistics, MicroEconomics",
+    details: "",
   },
   {
     school: "Orange Coast College (OCC)",
     degree: "Film & Television Production Certificate",
     location: "Costa Mesa, CA",
     date: "",
-    details: "Film and television production coursework",
+    details: "",
   },
   {
     school: "Hochschule Darmstadt (H_da)",
     degree: "Visual Communication Exchange Program",
     location: "Darmstadt, Germany",
     date: "",
-    details: "Production & Realization IV / Computer",
+    details: "",
   },
 ];
 
