@@ -39,13 +39,13 @@ const EducationSection = () => (
     <h2 className="section-title">Academic<br /><em>Background</em></h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {education.map((ed) => (
-        <div key={ed.school} className="bg-warm-white border border-border rounded-sm p-7">
+        <a key={ed.school} href={ed.website} target="_blank" rel="noopener noreferrer" className="bg-warm-white border border-border rounded-sm p-7 block hover:border-terracotta transition-colors">
           <p className="text-[0.88rem] font-medium text-deep">{ed.school}</p>
           <p className="text-[0.82rem] text-medium mt-1">{ed.degree}</p>
           <p className="text-[0.72rem] text-light-text italic mt-1">{ed.location}</p>
           {ed.date && <p className="text-[0.72rem] text-light-text mt-0.5">{ed.date}</p>}
           <p className="text-[0.78rem] text-light-text mt-3 leading-relaxed">{ed.details}</p>
-        </div>
+        </a>
       ))}
     </div>
   </section>
