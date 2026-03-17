@@ -15,7 +15,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/92 backdrop-blur-xl border-b border-border px-[6%] flex items-center h-16">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/92 backdrop-blur-xl border-b border-border flex items-center h-16">
+        <div className="w-full max-w-[1200px] mx-auto px-[6%] md:px-[10%]">
         <ul className="hidden md:flex w-full justify-between list-none">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
@@ -30,6 +31,7 @@ const Navbar = () => {
           <span className={`block w-6 h-0.5 bg-deep rounded-sm transition-all ${open ? "opacity-0" : ""}`} />
           <span className={`block w-6 h-0.5 bg-deep rounded-sm transition-all ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
         </button>
+        </div>
       </nav>
       {open && (
         <div className="fixed top-16 left-0 right-0 bg-cream/98 backdrop-blur-2xl border-b border-border z-[99] flex flex-col px-[6%] py-6 shadow-lg md:hidden">
