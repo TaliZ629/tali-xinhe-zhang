@@ -3,7 +3,7 @@ const education = [
     school: "New York University",
     degree: "M.S. Engineering, Management of Technology (STEM)",
     location: "Brooklyn, NY",
-    date: "09/2025 – 05/2027",
+    date: "09/2025 – 05/2027 (expected)",
     details: "",
   },
   {
