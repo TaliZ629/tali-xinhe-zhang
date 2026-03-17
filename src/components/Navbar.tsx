@@ -31,6 +31,7 @@ const Navbar = () => {
           <span className={`block w-6 h-0.5 bg-deep rounded-sm transition-all ${open ? "opacity-0" : ""}`} />
           <span className={`block w-6 h-0.5 bg-deep rounded-sm transition-all ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
         </button>
+        </div>
       </nav>
       {open && (
         <div className="fixed top-16 left-0 right-0 bg-cream/98 backdrop-blur-2xl border-b border-border z-[99] flex flex-col px-[6%] py-6 shadow-lg md:hidden">
