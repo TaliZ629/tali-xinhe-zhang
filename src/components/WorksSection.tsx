@@ -44,7 +44,7 @@ const projects = [
 const WorksSection = () => (
   <section id="work" className="px-[6%] md:px-[10%] py-24 bg-background">
     <p className="section-label">04 — Selected Work</p>
-    <h2 className="section-title">Data-Driven<br /><em>Projects</em></h2>
+    <h2 className="section-title">Analytics & Storytelling<br /><em>Projects</em></h2>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {projects.map((p) => {
         const thumb = getThumbnail(p.link, p.thumb);
