@@ -1,8 +1,10 @@
-const getThumbnail = (link: string): string | null => {
-  // YouTube
+import thumbCapitalMarkets from "@/assets/thumb-capital-markets.png";
+import thumbSocialMedia from "@/assets/thumb-social-media.png";
+
+const getThumbnail = (link: string, staticThumb?: string): string | null => {
+  if (staticThumb) return staticThumb;
   const ytMatch = link.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([\w-]+)/);
   if (ytMatch) return `https://img.youtube.com/vi/${ytMatch[1]}/hqdefault.jpg`;
-  // Vimeo
   const vimeoMatch = link.match(/vimeo\.com\/(\d+)/);
   if (vimeoMatch) return `https://vumbnail.com/${vimeoMatch[1]}.jpg`;
   return null;
@@ -14,12 +16,14 @@ const projects = [
     title: "Capital Markets Weekly Update",
     desc: "A weekly bilingual interactive financial dashboard with real-time market data visualization and analysis reporting.",
     link: "https://capital-markets-weekly.lovable.app/",
+    thumb: thumbCapitalMarkets,
   },
   {
     cat: "Social Media · Audience Analytics",
     title: "Social Media Performance Dashboard",
     desc: "A data-driven performance report analyzing organic reach, engagement rates, and audience growth across TikTok, Douyin, and Xiaohongshu.",
     link: "https://taliz629.github.io/social_media_performance_2-18v4/",
+    thumb: thumbSocialMedia,
   },
   {
     cat: "Video Production · Documentary",
@@ -43,7 +47,7 @@ const WorksSection = () => (
     <h2 className="section-title">Data-Driven<br /><em>Projects</em></h2>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {projects.map((p) => {
-        const thumb = getThumbnail(p.link);
+        const thumb = getThumbnail(p.link, p.thumb);
         return (
           <article
             key={p.title}
