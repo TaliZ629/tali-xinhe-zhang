@@ -23,6 +23,7 @@ const projects = [
     title: "Social Media Performance Dashboard",
     desc: "A data-driven performance report analyzing organic reach, engagement rates, and audience growth across TikTok, Douyin, and Xiaohongshu.",
     link: "https://taliz629.github.io/social_media_performance_2-18v4/",
+    thumb: thumbSocialMedia,
   },
   {
     cat: "Video Production · Documentary",
