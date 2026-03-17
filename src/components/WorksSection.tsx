@@ -13,7 +13,7 @@ const projects = [
   },
   {
     cat: "Video Production · Documentary",
-    title: "Campus Food Rescue Documentary",
+    title: "The Food Riders of Orange Coast College",
     desc: "Edited a 3-minute documentary on a campus organization that takes excess food from the Orange Coast College cafeteria and delivers it to local food pantries serving Orange County's homeless population via bicycles and trailers.",
     link: "https://www.youtube.com/watch?v=nl1PePNogak",
   },
