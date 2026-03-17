@@ -129,7 +129,7 @@ const VolunteerSection = () => {
                     <img
                       src={item.media.src}
                       alt={item.media.alt}
-                      className="w-full max-h-[300px] object-contain bg-muted/30 cursor-pointer hover:opacity-90 transition-opacity"
+                      className="w-full object-contain bg-muted/30 cursor-pointer hover:opacity-90 transition-opacity"
                       loading="lazy"
                       onClick={() =>
                         item.media?.type === "image" &&
