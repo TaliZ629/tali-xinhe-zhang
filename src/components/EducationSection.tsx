@@ -5,6 +5,7 @@ const education = [
     location: "Brooklyn, NY",
     date: "09/2025 – 05/2027 (expected)",
     details: "",
+    website: "https://www.nyu.edu/",
   },
   {
     school: "The Ohio State University",
@@ -12,6 +13,7 @@ const education = [
     location: "Columbus, OH",
     date: "",
     details: "",
+    website: "https://www.osu.edu/",
   },
   {
     school: "Orange Coast College",
@@ -19,6 +21,7 @@ const education = [
     location: "Costa Mesa, CA",
     date: "",
     details: "",
+    website: "https://orangecoastcollege.edu/",
   },
   {
     school: "Hochschule Darmstadt",
@@ -26,6 +29,7 @@ const education = [
     location: "Darmstadt, Germany",
     date: "",
     details: "",
+    website: "https://h-da.de/en/",
   },
 ];
 
