@@ -18,6 +18,13 @@ const projects = [
     link: "https://youtu.be/nl1PePNogak",
     linkLabel: "Watch on YouTube ↗",
   },
+  {
+    cat: "Video Production · Documentary",
+    title: "The Rock Climber",
+    desc: "Edited this short documentary shaping narrative rhythm and visual flow to convey the emotional and physical experience of climbing.",
+    link: "https://vimeo.com/1174558981",
+    linkLabel: "Watch on Vimeo ↗",
+  },
 ];
 
 const WorksSection = () => (
