@@ -21,7 +21,7 @@ const education = [
     details: "",
   },
   {
-    school: "Hochschule Darmstadt (H_da)",
+    school: "Hochschule Darmstadt",
     degree: "Visual Communication Exchange Program",
     location: "Darmstadt, Germany",
     date: "",
