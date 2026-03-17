@@ -1,0 +1,107 @@
+const volunteerExperiences = [
+  {
+    date: "November 2021",
+    org: "Community Outreach Program",
+    location: "China",
+    role: "Volunteer Storyteller & Community Outreach Participant",
+    subtitle: "A Storytelling Session in the Elementary School Community Outreach Program for Left-Behind Children",
+    bullets: [
+      "Visited an elementary school with the company's social work club to support left-behind children through an engaging educational storytelling activity",
+      "Shared How to Make an Apple Pie and See the World to help students appreciate the beauty of small moments and expand their imagination beyond their environment",
+      "Led interactive discussions, encouraged curiosity, and helped foster confidence, emotional expression, and a sense of connection to the broader world",
+    ],
+  },
+  {
+    date: "October 2018",
+    org: "TEDxTurtleRock",
+    location: "Irvine, CA",
+    role: "Post-Production Editor / Event Production Assistant",
+    subtitle: "TEDxTurtleRock: Ideas Unchained",
+    bullets: [
+      "Edited TEDx TurtleRock event videos and assisted the organizer in designing the event setup and activities",
+      "Created digital and print materials including posters, flyers, presentations, and motion graphics",
+    ],
+  },
+  {
+    date: "September 2018",
+    org: "OCC Film & Visual Arts Honors Society",
+    location: "Costa Mesa, CA",
+    role: "Publicity / Event Organizer",
+    subtitle: "Casting Mixer — Orange Coast College",
+    bullets: [
+      "Campus networking event for film and visual arts majors; designed event posters and managed social media newsfeed on Instagram and Facebook",
+      "Provided the online sign-up platform for incoming guests and assisted with on-site reception organization",
+    ],
+  },
+  {
+    date: "August 2018",
+    org: "WRSA & CCG",
+    location: "Beijing, China",
+    role: "Media & Broadcasting Assistant",
+    subtitle: "13th Chinese Returned Scholars Innovation & Entrepreneurship Forum — Beijing Forum of WRSA",
+    bullets: [
+      "Selected as one of 18 volunteers from an international pool of 14,000 applicants for the largest annual WRSA conference, with 800+ attendees and 50+ leading executives, entrepreneurs, and scholars",
+      "Served as media group assistant, fielding questions and providing materials for guests; conference coverage published on CCTV, Xinhua, China Daily, Sohu, Sina, and China.com",
+    ],
+  },
+  {
+    date: "May 2018",
+    org: "Orange Coast College",
+    location: "Costa Mesa, CA",
+    role: "Producer Assistant / Camera Operator",
+    subtitle: "OCC 2018 Commencement Ceremony — Live Streaming",
+    bullets: [
+      "Set up the shooting booth in the arena and operated a camera transmitting live moving images to the big screen on stage for all commencement attendees",
+    ],
+  },
+  {
+    date: "May 2018",
+    org: "Orange Coast College",
+    location: "Costa Mesa, CA",
+    role: "Production Assistant",
+    subtitle: "Women in Film Panel Discussion — Live Streaming / Open Panel",
+    bullets: [
+      "Supported a panel inviting female filmmakers to share experiences and advice on working in the industry; provided equipment for host and guests and monitored the live stream on OCC's website",
+      "Guests: Dorian Harris (ACE Editor), Courtney Stewart (Actress, Producer, Show Host), Shelby Cipolla (Camera Assistant)",
+    ],
+  },
+  {
+    date: "January 2018",
+    org: "",
+    location: "Digital Video · 30 min",
+    role: "Filming Assistant",
+    subtitle: "Interview with Xinchuan Wang: The Buddhism Master of China",
+    bullets: [
+      "Assisted in filming a one-hour interview with Buddhism Master Xinchuan Wang introducing Buddhism across regions including mainland China and India",
+    ],
+  },
+];
+
+const VolunteerSection = () => (
+  <section id="volunteer" className="px-[6%] md:px-[10%] py-24 bg-background">
+    <p className="section-label">07 — Volunteer Experience</p>
+    <h2 className="section-title">Giving Back &<br /><em>Community Impact</em></h2>
+    <div className="space-y-6">
+      {volunteerExperiences.map((item, i) => (
+        <div key={i} className="flex flex-col md:flex-row gap-4 md:gap-10 border-b border-border pb-6 last:border-b-0">
+          <div className="md:w-[200px] flex-shrink-0">
+            <p className="text-[0.78rem] text-terracotta font-medium">{item.date}</p>
+            {item.org && <p className="text-[0.82rem] text-deep mt-0.5">{item.org}</p>}
+            <p className="text-[0.72rem] text-light-text italic">{item.location}</p>
+          </div>
+          <div className="flex-1">
+            <p className="text-[0.88rem] font-medium text-deep">{item.role}</p>
+            <p className="text-[0.72rem] tracking-[0.12em] uppercase text-dusty-rose mb-2">{item.subtitle}</p>
+            <ul className="list-disc pl-5 space-y-1">
+              {item.bullets.map((b, j) => (
+                <li key={j} className="text-[0.8rem] text-medium leading-[1.7]">{b}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+);
+
+export default VolunteerSection;
