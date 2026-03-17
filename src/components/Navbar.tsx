@@ -15,7 +15,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/92 backdrop-blur-xl border-b border-border px-[6%] flex items-center h-16">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/92 backdrop-blur-xl border-b border-border flex items-center h-16">
+        <div className="w-full max-w-[1200px] mx-auto px-[6%] md:px-[10%]">
         <ul className="hidden md:flex w-full justify-between list-none">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
