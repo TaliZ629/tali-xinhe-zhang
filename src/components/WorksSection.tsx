@@ -47,7 +47,7 @@ const WorksSection = () => (
     <h2 className="section-title">Data-Driven<br /><em>Projects</em></h2>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {projects.map((p) => {
-        const thumb = getThumbnail(p.link);
+        const thumb = getThumbnail(p.link, p.thumb);
         return (
           <article
             key={p.title}
