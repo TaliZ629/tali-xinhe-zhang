@@ -1,3 +1,4 @@
+import { useState } from "react";
 import volunteerOutreach from "@/assets/volunteer-outreach.jpg";
 import volunteerTedx from "@/assets/volunteer-tedx.jpg";
 import volunteerWrsa from "@/assets/volunteer-wrsa.jpg";
@@ -99,50 +100,80 @@ const volunteerExperiences: VolunteerExp[] = [
   },
 ];
 
-const VolunteerSection = () => (
-  <section id="volunteer" className="px-[6%] md:px-[10%] py-24 bg-background">
-    <p className="section-label">07 — Volunteer Experience</p>
-    <h2 className="section-title">Giving Back &<br /><em>Community Impact</em></h2>
-    <div className="space-y-6">
-      {volunteerExperiences.map((item, i) => (
-        <div key={i} className="flex flex-col md:flex-row gap-4 md:gap-10 border-b border-border pb-6 last:border-b-0">
-          <div className="md:w-[200px] flex-shrink-0">
-            <p className="text-[0.78rem] text-terracotta font-medium">{item.date}</p>
-            {item.org && <p className="text-[0.82rem] text-deep mt-0.5">{item.org}</p>}
-            <p className="text-[0.72rem] text-light-text italic">{item.location}</p>
+const VolunteerSection = () => {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+
+  return (
+    <section id="volunteer" className="px-[6%] md:px-[10%] py-24 bg-background">
+      <p className="section-label">07 — Volunteer Experience</p>
+      <h2 className="section-title">Giving Back &<br /><em>Community Impact</em></h2>
+      <div className="space-y-6">
+        {volunteerExperiences.map((item, i) => (
+          <div key={i} className="flex flex-col md:flex-row gap-4 md:gap-10 border-b border-border pb-6 last:border-b-0">
+            <div className="md:w-[200px] flex-shrink-0">
+              <p className="text-[0.78rem] text-terracotta font-medium">{item.date}</p>
+              {item.org && <p className="text-[0.82rem] text-deep mt-0.5">{item.org}</p>}
+              <p className="text-[0.72rem] text-light-text italic">{item.location}</p>
+            </div>
+            <div className="flex-1">
+              <p className="text-[0.88rem] font-medium text-deep">{item.role}</p>
+              <p className="text-[0.72rem] tracking-[0.12em] uppercase text-dusty-rose mb-2">{item.subtitle}</p>
+              <ul className="list-disc pl-5 space-y-1">
+                {item.bullets.map((b, j) => (
+                  <li key={j} className="text-[0.8rem] text-medium leading-[1.7]">{b}</li>
+                ))}
+              </ul>
+              {item.media && (
+                <div className="mt-4 rounded overflow-hidden border border-border">
+                  {item.media.type === "image" ? (
+                    <img
+                      src={item.media.src}
+                      alt={item.media.alt}
+                      className="w-full max-h-[300px] object-contain bg-muted/30 cursor-pointer hover:opacity-90 transition-opacity"
+                      loading="lazy"
+                      onClick={() =>
+                        item.media?.type === "image" &&
+                        setLightbox({ src: item.media.src, alt: item.media.alt })
+                      }
+                      title="Click to view full image"
+                    />
+                  ) : (
+                    <video
+                      src={item.media.src}
+                      controls
+                      className="w-full max-h-[300px] bg-black"
+                      preload="metadata"
+                    />
+                  )}
+                </div>
+              )}
+            </div>
           </div>
-          <div className="flex-1">
-            <p className="text-[0.88rem] font-medium text-deep">{item.role}</p>
-            <p className="text-[0.72rem] tracking-[0.12em] uppercase text-dusty-rose mb-2">{item.subtitle}</p>
-            <ul className="list-disc pl-5 space-y-1">
-              {item.bullets.map((b, j) => (
-                <li key={j} className="text-[0.8rem] text-medium leading-[1.7]">{b}</li>
-              ))}
-            </ul>
-            {item.media && (
-              <div className="mt-4 rounded overflow-hidden border border-border">
-                {item.media.type === "image" ? (
-                  <img
-                    src={item.media.src}
-                    alt={item.media.alt}
-                    className="w-full max-h-[300px] object-cover"
-                    loading="lazy"
-                  />
-                ) : (
-                  <video
-                    src={item.media.src}
-                    controls
-                    className="w-full max-h-[300px] bg-black"
-                    preload="metadata"
-                  />
-                )}
-              </div>
-            )}
-          </div>
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm cursor-pointer"
+          onClick={() => setLightbox(null)}
+        >
+          <img
+            src={lightbox.src}
+            alt={lightbox.alt}
+            className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl"
+          />
+          <button
+            className="absolute top-6 right-6 text-white/80 hover:text-white text-3xl font-light transition-colors"
+            onClick={() => setLightbox(null)}
+            aria-label="Close lightbox"
+          >
+            ✕
+          </button>
         </div>
-      ))}
-    </div>
-  </section>
-);
+      )}
+    </section>
+  );
+};
 
 export default VolunteerSection;
