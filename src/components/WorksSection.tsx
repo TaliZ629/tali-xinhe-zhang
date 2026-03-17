@@ -1,3 +1,13 @@
+const getThumbnail = (link: string): string | null => {
+  // YouTube
+  const ytMatch = link.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([\w-]+)/);
+  if (ytMatch) return `https://img.youtube.com/vi/${ytMatch[1]}/hqdefault.jpg`;
+  // Vimeo
+  const vimeoMatch = link.match(/vimeo\.com\/(\d+)/);
+  if (vimeoMatch) return `https://vumbnail.com/${vimeoMatch[1]}.jpg`;
+  return null;
+};
+
 const projects = [
   {
     cat: "Finance · Data Analytics",
@@ -31,25 +41,38 @@ const WorksSection = () => (
   <section id="work" className="px-[6%] md:px-[10%] py-24 bg-background">
     <p className="section-label">04 — Selected Work</p>
     <h2 className="section-title">Data-Driven<br /><em>Projects</em></h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {projects.map((p) => (
-        <article
-          key={p.title}
-          className="bg-warm-white border border-border rounded-sm overflow-hidden block hover:-translate-y-1 hover:shadow-xl transition-all p-6"
-        >
-          <p className="text-[0.65rem] tracking-[0.18em] uppercase text-terracotta mb-1.5">{p.cat}</p>
-          <h3 className="text-[1.1rem] font-medium text-deep mb-2 leading-snug">{p.title}</h3>
-          <p className="text-[0.8rem] text-light-text leading-relaxed mb-4">{p.desc}</p>
-          <a
-            href={p.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-[0.72rem] tracking-[0.12em] uppercase text-terracotta no-underline hover:opacity-80 transition-opacity"
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {projects.map((p) => {
+        const thumb = getThumbnail(p.link);
+        return (
+          <article
+            key={p.title}
+            className="bg-warm-white border border-border rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all"
           >
-            {p.linkLabel || "View Project ↗"}
-          </a>
-        </article>
-      ))}
+            {thumb && (
+              <img
+                src={thumb}
+                alt={`${p.title} thumbnail`}
+                className="w-full h-40 object-cover"
+                loading="lazy"
+              />
+            )}
+            <div className="p-6">
+              <p className="text-[0.65rem] tracking-[0.18em] uppercase text-terracotta mb-1.5">{p.cat}</p>
+              <h3 className="text-[1.1rem] font-medium text-deep mb-2 leading-snug">{p.title}</h3>
+              <p className="text-[0.8rem] text-light-text leading-relaxed mb-4">{p.desc}</p>
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-[0.72rem] tracking-[0.12em] uppercase text-terracotta no-underline hover:opacity-80 transition-opacity"
+              >
+                {p.linkLabel || "View Project ↗"}
+              </a>
+            </div>
+          </article>
+        );
+      })}
     </div>
   </section>
 );
