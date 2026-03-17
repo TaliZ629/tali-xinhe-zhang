@@ -18,7 +18,7 @@ const education = [
     degree: "Film & Television Production Certificate",
     location: "Costa Mesa, CA",
     date: "",
-    details: "Film and television production coursework",
+    details: "",
   },
   {
     school: "Hochschule Darmstadt (H_da)",
