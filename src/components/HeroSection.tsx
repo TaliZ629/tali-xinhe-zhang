@@ -23,9 +23,14 @@ const HeroSection = () => {
       <div className="flex flex-col md:flex-row items-center md:items-start justify-between px-[6%] md:px-[10%] py-[8%] max-w-[1200px] mx-auto">
         {/* Left: Text */}
         <div className="max-w-[60%] max-md:max-w-full flex flex-col max-md:items-center justify-center animate-fade-up" style={{ animationDelay: "0.2s" }}>
-          <h1 className="font-display text-[clamp(3.5rem,6vw,5.5rem)] font-normal leading-[1.05] text-deep mb-1 max-md:text-center italic">
-            Tali Zhang
-          </h1>
+          <div className="relative mb-1 max-md:text-center">
+            <span className="font-display text-[clamp(3.5rem,6vw,5.5rem)] font-normal leading-[1.05] text-terracotta italic absolute top-[0.06em] left-[0.06em] max-md:relative max-md:top-0 max-md:left-0 select-none" aria-hidden="true">
+              Tali Zhang
+            </span>
+            <h1 className="font-display text-[clamp(3.5rem,6vw,5.5rem)] font-normal leading-[1.05] text-deep italic relative">
+              Tali Zhang
+            </h1>
+          </div>
           <p className="text-lg font-light italic text-light-text mb-8 max-md:text-center">
             Media · Technology · Business
           </p>
