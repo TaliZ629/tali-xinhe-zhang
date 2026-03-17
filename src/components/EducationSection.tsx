@@ -14,14 +14,14 @@ const education = [
     details: "",
   },
   {
-    school: "Orange Coast College (OCC)",
+    school: "Orange Coast College",
     degree: "Film & Television Production Certificate",
     location: "Costa Mesa, CA",
     date: "",
     details: "",
   },
   {
-    school: "Hochschule Darmstadt (H_da)",
+    school: "Hochschule Darmstadt",
     degree: "Visual Communication Exchange Program",
     location: "Darmstadt, Germany",
     date: "",
