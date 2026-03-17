@@ -39,7 +39,7 @@ const WorksSection = () => (
             rel="noopener noreferrer"
             className="inline-flex items-center text-[0.72rem] tracking-[0.12em] uppercase text-terracotta no-underline hover:opacity-80 transition-opacity"
           >
-            View Project ↗
+            {p.linkLabel || "View Project ↗"}
           </a>
         </article>
       ))}
