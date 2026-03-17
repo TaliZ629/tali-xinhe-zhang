@@ -1,5 +1,4 @@
 import { useState } from "react";
-import profilePhoto from "@/assets/profile-photo.jpg";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -16,11 +15,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/92 backdrop-blur-xl border-b border-border px-[6%] flex items-center justify-between h-16">
-        <a href="#" className="flex items-center gap-2.5 no-underline">
-          <img src={profilePhoto} alt="Tali Zhang" className="w-9 h-9 rounded-full object-cover object-top border-2 border-blush flex-shrink-0" />
-        </a>
-        <ul className="hidden md:flex gap-10 list-none">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/92 backdrop-blur-xl border-b border-border px-[6%] flex items-center h-16">
+        <ul className="hidden md:flex w-full justify-between list-none">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <a href={href} className="text-[0.78rem] tracking-[0.1em] uppercase text-medium no-underline hover:text-terracotta transition-colors">
