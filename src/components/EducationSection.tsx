@@ -10,7 +10,7 @@ const education = [
     school: "The Ohio State University",
     degree: "B.S. Design, Visual Communication Design",
     location: "Columbus, OH",
-    date: "08/2012 – 05/2016",
+    date: "",
     details: "Visual Communication Design, Statistics, MicroEconomics",
   },
   {
