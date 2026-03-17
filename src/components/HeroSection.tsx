@@ -13,7 +13,7 @@ const HeroSection = () => {
             Media · Technology · Business
           </p>
           <p className="text-[0.92rem] leading-[1.8] text-medium max-w-[480px] mb-10">
-            Cross-functional professional with experience across operations, data analytics, media production, and marketing — bridging Western and Chinese markets with bilingual fluency and a global mindset.
+            Empowering the intersection of media, technology, and business through data-driven strategy, technical innovation, and impactful storytelling.
           </p>
           <div className="flex gap-4 flex-wrap">
             <a href="#work" className="bg-terracotta text-primary-foreground px-7 py-3 rounded-sm text-[0.78rem] tracking-[0.1em] uppercase no-underline hover:bg-dusty-rose hover:-translate-y-0.5 transition-all">
