@@ -3,25 +3,19 @@ const projects = [
     cat: "Finance · Data Analytics",
     title: "Capital Markets Weekly Update",
     desc: "Interactive financial dashboard with real-time market data visualization and weekly analysis reporting.",
-    link: "https://taliz629.github.io/cap_mkts_weekly_update_2-17v3/",
-    emoji: "📊",
-    gradient: "from-terracotta to-blush",
+    link: "https://capital-markets-weekly.lovable.app/",
   },
   {
     cat: "Finance · Chinese Market Analysis",
     title: "Capital Markets Weekly Update (中文)",
     desc: "Chinese-language version of the capital markets dashboard — bilingual financial reporting bridging Western and Chinese-speaking audiences.",
     link: "https://taliz629.github.io/cap_mkts_weekly_update_2-17v3_cn/",
-    emoji: "🇨🇳",
-    gradient: "from-dusty-rose to-blush",
   },
   {
     cat: "Social Media · Audience Analytics",
     title: "Social Media Performance Dashboard",
     desc: "A data-driven performance report analyzing organic reach, engagement rates, and audience growth across TikTok, Douyin, and Xiaohongshu.",
     link: "https://taliz629.github.io/social_media_performance_2-18v4/",
-    emoji: "📱",
-    gradient: "from-terracotta to-blush",
   },
 ];
 
@@ -36,19 +30,14 @@ const WorksSection = () => (
           href={p.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-warm-white border border-border rounded-sm overflow-hidden no-underline block hover:-translate-y-1 hover:shadow-xl transition-all group"
+          className="bg-warm-white border border-border rounded-sm overflow-hidden no-underline block hover:-translate-y-1 hover:shadow-xl transition-all group p-6"
         >
-          <div className={`h-[200px] overflow-hidden relative bg-gradient-to-br ${p.gradient} flex items-center justify-center`}>
-            <span className="text-5xl opacity-30">{p.emoji}</span>
-          </div>
-          <div className="p-5">
-            <p className="text-[0.65rem] tracking-[0.18em] uppercase text-terracotta mb-1.5">{p.cat}</p>
-            <h3 className="text-[1.1rem] font-medium text-deep mb-2 leading-snug">{p.title}</h3>
-            <p className="text-[0.8rem] text-light-text leading-relaxed mb-4">{p.desc}</p>
-            <span className="text-[0.72rem] tracking-[0.12em] uppercase text-terracotta flex items-center gap-1.5">
-              View Live Project <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </span>
-          </div>
+          <p className="text-[0.65rem] tracking-[0.18em] uppercase text-terracotta mb-1.5">{p.cat}</p>
+          <h3 className="text-[1.1rem] font-medium text-deep mb-2 leading-snug">{p.title}</h3>
+          <p className="text-[0.8rem] text-light-text leading-relaxed mb-4">{p.desc}</p>
+          <span className="text-[0.72rem] tracking-[0.12em] uppercase text-terracotta flex items-center gap-1.5">
+            View Live Project <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </span>
         </a>
       ))}
     </div>
