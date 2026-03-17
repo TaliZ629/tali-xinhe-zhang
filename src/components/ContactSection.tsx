@@ -1,6 +1,7 @@
 const contacts = [
-  { label: "Email", value: "xz3627@nyu.edu", href: "mailto:xz3627@nyu.edu" },
-  { label: "LinkedIn", value: "Xinhe Zhang", href: "https://linkedin.com/in/xinhezhang" },
+  { label: "Email", value: "xz5471@nyu.edu", href: "mailto:xz5471@nyu.edu" },
+  { label: "Phone", value: "(347) 633-3897", href: "tel:+13476333897" },
+  { label: "LinkedIn", value: "Xinhe Zhang", href: "https://www.linkedin.com/in/zhangxinhe/" },
   { label: "Location", value: "New York City", href: "#" },
 ];
 

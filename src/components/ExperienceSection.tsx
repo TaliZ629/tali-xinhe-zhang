@@ -11,22 +11,23 @@ const technicalExp: ExpItem[] = [
     date: "12/2021 – 01/2025",
     company: "Celestica",
     location: "Shanghai, China",
-    role: "Operations Analyst",
+    role: "Operations Analyst — Procurement & Operational Analytics",
     bullets: [
-      "Audited 1,562 POs totaling US$82M in 2023 to reduce post-issuance risks; collaborated with cross-functional teams across Asia and North America",
-      "Delivered US$216K savings on a US$1.3M equipment deal; managed quarterly Capex reports via Google Sheets across regions",
-      "Led bilingual (EN/CH) emceeing for 10+ corporate events with 300–500+ attendees",
-      "Earned Celestica People Driven Acknowledgment Award and three Toastmasters awards",
+      "Reviewed 1,562 purchase orders totaling $82M across Asia and North America to ensure financial compliance with internal policies and budget guidelines, reducing operational risk prior to management's spending approval.",
+      "Streamlined cross-functional operational workflows using ServiceNow and Ivalua with procurement, program management and finance teams to optimize spending strategy while improving production efficiency.",
+      "Built quarterly Capex tracking reports in Excel and Google Sheets to monitor global spending and support leadership budget decisions.",
+      "Conducted pricing analysis and negotiations for a $1.3M equipment purchase, contributing to $216K in negotiated savings.",
+      "Coordinated and executed large-scale (300–500 participants) bilingual corporate campaigns and events.",
     ],
   },
   {
     date: "08/2021 – 12/2021",
     company: "Wicresoft",
     location: "Shanghai, China",
-    role: "Microsoft Azure & Dynamics CRM — Customer Service QA",
+    role: "Microsoft Azure & Dynamics CRM — Customer Service Quality Assurance",
     bullets: [
-      "Reviewed and documented case timelines and next steps using SharePoint and Microsoft Dynamics 365",
-      "Generated 12+ bilingual research and follow-up reports for enterprise clients including Nike, Medtronic, and 3M",
+      "Managed enterprise support case documentation in Microsoft Dynamics 365 and SharePoint, ensuring accuracy in technical support case timelines, escalation paths, and resolution tracking.",
+      "Identified recurring case bottlenecks and coordinated process adjustments to improve engineers' service response efficiency.",
     ],
   },
   {
@@ -35,8 +36,9 @@ const technicalExp: ExpItem[] = [
     location: "Guangzhou, China",
     role: "Intellectual Property Case Specialist",
     bullets: [
-      "Produced 12+ bilingual research and follow-up reports for clients including Nike, Medtronic, and 3M",
-      "Collaborated with notary public on product notarization, drafted notarization reports, and organized project expenses",
+      "Managed intellectual property case workflows by coordinating client requirements, third-party agencies, and internal teams for enterprise clients including Nike, Medtronic, and 3M.",
+      "Produced 12+ bilingual analytical reports summarizing issue patterns, risks, required actions, resolution progress, and client impact.",
+      "Worked with notary offices to validate product documentation with supporting materials to ensure compliance with regulatory standards.",
     ],
   },
 ];
@@ -46,20 +48,20 @@ const mediaExp: ExpItem[] = [
     date: "10/2019 – 02/2020",
     company: "ASDC",
     location: "Beijing, China",
-    role: "Tencent CSIG & BMW ADDP — Project & Marketing Specialist",
+    role: "Tencent CSIG & BMW ADDP — Project and Marketing Specialist",
     bullets: [
-      "Produced and edited promotional sizzle videos for BMW Group China High-Performance D3 Platform Go-Live Ceremony",
-      "Coordinated domestic and international guests for corporate conferences and data center site visits",
+      "Produced and edited promotional sizzle videos using Adobe Creative Cloud for the BMW Group China High-Performance D3 Platform Go-Live Ceremony.",
+      "Coordinated and hosted domestic and international guests for corporate events, including conferences and data center site visits.",
     ],
   },
   {
     date: "02/2019 – 08/2019",
-    company: "Weidong Cloud Education",
+    company: "Weidong Group, Weidong Cloud Education",
     location: "Beijing, China",
-    role: "Course R&D Manager — France Brest Business School Programs",
+    role: "Course Research & Development Manager — France Brest Business School Programs",
     bullets: [
-      "Produced high-quality video content for 8 MBA courses, 11 Big Data Specialized Master's courses, and 4 additional programs",
-      "Ensured brand consistency, cohesive visual style, and on-schedule release through partnership with editors and international professors",
+      "Produced high-quality educational video content of 8 MBA courses, 11 Big Data Specialized Master's courses, and 4 additional programs by partnering with editors to ensure brand consistency and on-schedule release.",
+      "Communicated with domestic and foreign professors on course contents to ensure clarity and organization before filming.",
     ],
   },
   {
@@ -68,19 +70,19 @@ const mediaExp: ExpItem[] = [
     location: "Beijing, China",
     role: "Content Producer Intern",
     bullets: [
-      "Researched and curated international news; wrote scripts and independently produced video content",
-      "Team produced a video achieving 54 million total online views during the 2018 World Cup season",
-      'Received "The Most Valuable Content Dedication Award" from CCTV',
+      "Researched and curated daily international news and trending social topics; wrote scripts and independently produced video content using Adobe applications.",
+      "Team produced a video achieving 54 million total online views during the 2018 World Cup season.",
+      'Received "The Most Valuable Content Dedication Award" from CCTV.',
     ],
   },
   {
     date: "10/2016 – 04/2017",
     company: "JJ Printing & Packaging",
     location: "Santa Fe Springs, CA",
-    role: "Digital Content Editor & Print Technician",
+    role: "Digital Content Editor and Print Technician",
     bullets: [
-      "Edited print files using Adobe applications; operated Sakurai offset and digital printing equipment independently",
-      "Managed client communication on deadlines, art proofs, and file changes",
+      "Communicated with clients to confirm deadlines and changes; used Adobe applications and Microsoft Office to edit files and samples.",
+      "Operated Sakurai offset and digital printing equipment independently; calibrated and ran digital machines daily.",
     ],
   },
 ];
@@ -112,10 +114,10 @@ const ExpCategory = ({ label, items }: { label: string; items: ExpItem[] }) => (
 
 const ExperienceSection = () => (
   <section id="experience" className="px-[6%] md:px-[10%] py-24 bg-warm-white">
-    <p className="section-label">05 — Experience</p>
+    <p className="section-label">03 — Experience</p>
     <h2 className="section-title">Where I've<br /><em>Made Impact</em></h2>
-    <ExpCategory label="Technical & Analytical" items={technicalExp} />
-    <ExpCategory label="Media & Production" items={mediaExp} />
+    <ExpCategory label="Technical & Analytical Work Experiences" items={technicalExp} />
+    <ExpCategory label="Media & Production Professional Work Experiences" items={mediaExp} />
   </section>
 );
 
