@@ -16,6 +16,7 @@ const projects = [
     title: "The Food Riders of OCC",
     desc: "Edited a 3-minute documentary on a campus organization that takes excess food from the Orange Coast College cafeteria and delivers it to local food pantries serving Orange County's homeless population via bicycles and trailers.",
     link: "https://youtu.be/nl1PePNogak",
+    linkLabel: "Watch on YouTube ↗",
   },
 ];
 
@@ -38,7 +39,7 @@ const WorksSection = () => (
             rel="noopener noreferrer"
             className="inline-flex items-center text-[0.72rem] tracking-[0.12em] uppercase text-terracotta no-underline hover:opacity-80 transition-opacity"
           >
-            View Project ↗
+            {p.linkLabel || "View Project ↗"}
           </a>
         </article>
       ))}
