@@ -10,7 +10,7 @@ const HeroSection = () => {
             Xinhe <em className="italic text-terracotta">(Tali)</em> Zhang
           </h1>
           <p className="text-lg font-light italic text-light-text mb-8">
-            Operations & Marketing · Business Strategy & Data Analytics · Technology & Media
+            Media · Technology · Business
           </p>
           <p className="text-[0.92rem] leading-[1.8] text-medium max-w-[480px] mb-10">
             Cross-functional professional with experience across operations, data analytics, media production, and marketing — bridging Western and Chinese markets with bilingual fluency and a global mindset.
