@@ -4,7 +4,7 @@ const education = [
     degree: "M.S. Engineering, Management of Technology (STEM)",
     location: "Brooklyn, NY",
     date: "09/2025 – 05/2027",
-    details: "Business Analytics, Data Visualization for Business Intelligence, Economics & Strategy, Marketing",
+    details: "",
   },
   {
     school: "The Ohio State University",
