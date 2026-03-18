@@ -6,7 +6,7 @@ const HeroSection = () => {
   const [isPressed, setIsPressed] = useState(false);
 
   const photoClasses = `
-    w-[300px] h-[300px] max-md:w-[180px] max-md:h-[180px] rounded-full object-cover object-top 
+    w-full h-full max-md:w-[180px] max-md:h-[180px] rounded-full object-cover object-top 
     border-[3px] border-blush shadow-[0_4px_32px_rgba(181,106,69,0.22)]
     transition-all duration-500 ease-out cursor-pointer
     ${isHovered ? "scale-105 shadow-[0_8px_40px_rgba(181,106,69,0.35)] border-terracotta" : ""}
@@ -20,7 +20,7 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen pt-16 relative bg-background">
-      <div className="flex flex-col md:flex-row items-center md:items-start justify-between px-[6%] md:px-[10%] py-[8%] max-w-[1200px] mx-auto">
+      <div className="flex flex-col md:flex-row items-center md:items-stretch justify-between px-[6%] md:px-[10%] py-[8%] max-w-[1200px] mx-auto">
         {/* Left: Text */}
         <div className="max-w-[60%] max-md:max-w-full flex flex-col max-md:items-center justify-center animate-fade-up" style={{ animationDelay: "0.2s" }}>
           <h1 className="font-display text-[clamp(3rem,5vw,4.5rem)] font-normal leading-[1.05] text-deep mb-1 max-md:text-center italic">
@@ -56,8 +56,8 @@ const HeroSection = () => {
 
         {/* Right: Profile Photo - desktop only */}
         <div
-          className="hidden md:block animate-fade-in flex-shrink-0 self-start"
-          style={{ animationDelay: "0.4s" }}
+          className="hidden md:flex animate-fade-in flex-shrink-0 items-center justify-center"
+          style={{ animationDelay: "0.4s", aspectRatio: "1", height: "100%" }}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onClick={handlePhoto}
