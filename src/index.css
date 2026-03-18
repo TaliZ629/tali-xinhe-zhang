@@ -49,6 +49,7 @@
 
     --font-display: 'DM Serif Display', serif;
     --font-body: 'Inter', sans-serif;
+    --hero-title-size: clamp(3rem, 5vw, 4.5rem);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -81,6 +82,10 @@
 @layer components {
   .font-display {
     font-family: var(--font-display);
+  }
+
+  .hero-title {
+    font-size: var(--hero-title-size);
   }
 
   .section-label {
