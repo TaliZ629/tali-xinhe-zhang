@@ -7,7 +7,7 @@ const contacts = [
 
 const ContactSection = () => (
   <section id="contact" className="px-[6%] md:px-[10%] py-24 bg-gradient-to-br from-deep to-[#3D2B1F] text-center">
-    <p className="text-[0.7rem] tracking-[0.25em] uppercase text-blush mb-2">06 — Contact</p>
+    <p className="text-[0.7rem] tracking-[0.25em] uppercase text-blush mb-2">07 — Contact</p>
     <h2 className="text-[clamp(2rem,3.5vw,3rem)] font-light leading-snug mb-2" style={{ color: "white" }}>Let's <em className="italic">Connect</em></h2>
     
     <div className="flex justify-center gap-8 flex-wrap mt-8">
