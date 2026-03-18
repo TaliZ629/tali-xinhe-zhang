@@ -19,7 +19,7 @@ const projects = [
     thumb: thumbSocialMedia,
   },
   {
-    cat: "Finance · Data Analytics",
+    cat: "Finance Coursework · Data Analytics",
     title: "Capital Markets Weekly Update",
     desc: "A weekly bilingual interactive financial dashboard with real-time market data visualization and analysis reporting.",
     link: "https://capital-markets-weekly.lovable.app/",
