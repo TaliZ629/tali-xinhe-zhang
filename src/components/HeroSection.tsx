@@ -6,7 +6,7 @@ const HeroSection = () => {
   const [isPressed, setIsPressed] = useState(false);
 
   const photoClasses = `
-    w-[300px] h-[300px] max-md:w-[180px] max-md:h-[180px] rounded-full object-cover object-top 
+    w-full h-full max-md:w-[180px] max-md:h-[180px] rounded-full object-cover object-top 
     border-[3px] border-blush shadow-[0_4px_32px_rgba(181,106,69,0.22)]
     transition-all duration-500 ease-out cursor-pointer
     ${isHovered ? "scale-105 shadow-[0_8px_40px_rgba(181,106,69,0.35)] border-terracotta" : ""}
