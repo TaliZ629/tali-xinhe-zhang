@@ -105,7 +105,7 @@ const VolunteerSection = () => {
 
   return (
     <section id="volunteer" className="px-[6%] md:px-[10%] py-24 bg-background">
-      <p className="section-label">07 — Volunteer Experience</p>
+      <p className="section-label">06 — Volunteer Experience</p>
       <h2 className="section-title">Giving Back &<br /><em>Community Impact</em></h2>
       <div className="space-y-6">
         {volunteerExperiences.map((item, i) => (
