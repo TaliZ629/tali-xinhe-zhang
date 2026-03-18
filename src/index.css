@@ -84,6 +84,10 @@
     font-family: var(--font-display);
   }
 
+  .hero-title {
+    font-size: var(--hero-title-size);
+  }
+
   .section-label {
     @apply text-xs tracking-[0.25em] uppercase;
     color: hsl(var(--terracotta));
