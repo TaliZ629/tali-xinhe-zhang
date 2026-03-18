@@ -20,7 +20,7 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen pt-16 relative bg-background">
-      <div className="flex flex-col md:flex-row items-center md:items-stretch justify-between px-[6%] md:px-[10%] py-[8%] max-w-[1200px] mx-auto">
+      <div className="flex flex-col md:flex-row items-center md:items-start justify-between px-[6%] md:px-[10%] py-[8%] max-w-[1200px] mx-auto">
         {/* Left: Text */}
         <div className="max-w-[60%] max-md:max-w-full flex flex-col max-md:items-center justify-center animate-fade-up" style={{ animationDelay: "0.2s" }}>
           <h1 className="font-display text-[clamp(3.5rem,6vw,5.5rem)] font-normal leading-[1.05] text-deep mb-1 max-md:text-center italic">
@@ -56,13 +56,13 @@ const HeroSection = () => {
 
         {/* Right: Profile Photo - desktop only */}
         <div
-          className="hidden md:flex items-center animate-fade-in flex-shrink-0"
+          className="hidden md:block mt-[5%] animate-fade-in flex-shrink-0"
           style={{ animationDelay: "0.4s" }}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onClick={handlePhoto}
         >
-          <img src={profilePhoto} alt="Xinhe (Tali) Zhang" className="w-auto h-full max-h-full rounded-full object-cover object-top border-[3px] border-blush shadow-[0_4px_32px_rgba(181,106,69,0.22)] transition-all duration-500 ease-out cursor-pointer aspect-square" style={isHovered ? { transform: 'scale(1.05)', boxShadow: '0 8px 40px rgba(181,106,69,0.35)', borderColor: 'hsl(var(--terracotta))' } : isPressed ? { transform: 'scale(0.95)' } : {}} />
+          <img src={profilePhoto} alt="Xinhe (Tali) Zhang" className={photoClasses} />
         </div>
       </div>
     </section>
