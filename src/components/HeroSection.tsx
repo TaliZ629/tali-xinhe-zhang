@@ -56,8 +56,8 @@ const HeroSection = () => {
 
         {/* Right: Profile Photo - desktop only */}
         <div
-          className="hidden md:flex items-start animate-fade-in flex-shrink-0 self-start"
-          style={{ animationDelay: "0.4s", marginTop: "calc(clamp(3.5rem, 6vw, 5.5rem) * 1.05 + 0.25rem + 1.5rem - 150px)" }}
+          className="hidden md:block animate-fade-in flex-shrink-0 self-start"
+          style={{ animationDelay: "0.4s" }}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onClick={handlePhoto}
