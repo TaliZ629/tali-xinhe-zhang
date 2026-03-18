@@ -57,7 +57,7 @@ const WorksSection = () => (
               <img
                 src={thumb}
                 alt={`${p.title} thumbnail`}
-                className="w-full h-40 object-cover"
+                className={`w-full h-40 object-cover ${p.thumb === thumbSocialMedia ? "object-[center_40%]" : ""}`}
                 loading="lazy"
               />
             )}
