@@ -12,18 +12,18 @@ const getThumbnail = (link: string, staticThumb?: string): string | null => {
 
 const projects = [
   {
-    cat: "Finance · Data Analytics",
-    title: "Capital Markets Weekly Update",
-    desc: "A weekly bilingual interactive financial dashboard with real-time market data visualization and analysis reporting.",
-    link: "https://capital-markets-weekly.lovable.app/",
-    thumb: thumbCapitalMarkets,
-  },
-  {
     cat: "Social Media · Audience Analytics",
     title: "Social Media Performance Dashboard",
     desc: "A data-driven performance report analyzing organic reach, engagement rates, and audience growth across TikTok, Douyin, and Xiaohongshu.",
     link: "https://taliz629.github.io/social_media_performance_2-18v4/",
     thumb: thumbSocialMedia,
+  },
+  {
+    cat: "Finance · Data Analytics",
+    title: "Capital Markets Weekly Update",
+    desc: "A weekly bilingual interactive financial dashboard with real-time market data visualization and analysis reporting.",
+    link: "https://capital-markets-weekly.lovable.app/",
+    thumb: thumbCapitalMarkets,
   },
   {
     cat: "Video Production · Documentary",
