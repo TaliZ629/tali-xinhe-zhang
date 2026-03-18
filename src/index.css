@@ -49,7 +49,7 @@
 
     --font-display: 'DM Serif Display', serif;
     --font-body: 'Inter', sans-serif;
-    --hero-title-size: clamp(3rem, 5vw, 4.5rem);
+    --hero-title-size: clamp(2.5rem, 4vw, 3.5rem);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
