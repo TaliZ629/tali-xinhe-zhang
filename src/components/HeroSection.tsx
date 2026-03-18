@@ -20,7 +20,7 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen pt-16 relative bg-background">
-      <div className="flex flex-col md:flex-row items-center md:items-start justify-between px-[6%] md:px-[10%] py-[8%] max-w-[1200px] mx-auto">
+      <div className="flex flex-col md:flex-row items-center md:items-stretch justify-between px-[6%] md:px-[10%] py-[8%] max-w-[1200px] mx-auto">
         {/* Left: Text */}
         <div className="max-w-[60%] max-md:max-w-full flex flex-col max-md:items-center justify-center animate-fade-up" style={{ animationDelay: "0.2s" }}>
           <h1 className="font-display text-[clamp(3rem,5vw,4.5rem)] font-normal leading-[1.05] text-deep mb-1 max-md:text-center italic">
