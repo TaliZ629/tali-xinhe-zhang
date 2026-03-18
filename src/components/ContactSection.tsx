@@ -17,7 +17,7 @@ const ContactSection = () => (
           href={href}
           target={href.startsWith("http") ? "_blank" : undefined}
           rel="noopener noreferrer"
-          className="flex flex-col items-center gap-2 no-underline text-[rgba(255,255,255,0.7)] hover:text-blush hover:border-blush transition-colors p-5 border border-[rgba(255,255,255,0.1)] rounded-sm min-w-[160px]"
+          className="flex flex-col items-center gap-2 no-underline text-medium hover:text-terracotta hover:border-terracotta transition-colors p-5 border border-border rounded-sm min-w-[160px]"
         >
           <span className="text-[0.65rem] tracking-[0.2em] uppercase">{label}</span>
           <span className="text-[0.85rem]">{value}</span>
