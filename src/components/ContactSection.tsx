@@ -1,5 +1,5 @@
 const contacts = [
-  { label: "Email", value: "xz5471@nyu.edu", href: "mailto:xz5471@nyu.edu" },
+  { label: "Email", value: "xinhe629@gmail.com", href: "mailto:xinhe629@gmail.com" },
   { label: "Phone", value: "(347) 633-3897", href: "tel:+13476333897" },
   { label: "LinkedIn", value: "Tali Zhang", href: "https://www.linkedin.com/in/zhangxinhe/" },
   { label: "Location", value: "New York City", href: "#" },
