@@ -10,7 +10,7 @@ const ContactSection = () => (
     <p className="section-label">07 — Contact</p>
     <h2 className="section-title">Let's <em>Connect</em></h2>
     
-    <div className="grid grid-cols-2 md:grid-cols-2 gap-6 mt-8 max-w-[600px] mx-auto">
+    <div className="grid grid-cols-2 gap-6 mt-8 max-w-[440px] mx-auto">
       {contacts.map(({ label, value, href }) => (
         <a
           key={label}
