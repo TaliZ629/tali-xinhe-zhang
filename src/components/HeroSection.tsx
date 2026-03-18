@@ -56,13 +56,15 @@ const HeroSection = () => {
 
         {/* Right: Profile Photo - desktop only */}
         <div
-          className="hidden md:block animate-fade-in flex-shrink-0 self-start"
+          className="hidden md:flex items-center animate-fade-in flex-shrink-0 self-stretch"
           style={{ animationDelay: "0.4s" }}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onClick={handlePhoto}
         >
-          <img src={profilePhoto} alt="Xinhe (Tali) Zhang" className={photoClasses} />
+          <div className="h-full aspect-square">
+            <img src={profilePhoto} alt="Xinhe (Tali) Zhang" className={photoClasses} />
+          </div>
         </div>
       </div>
     </section>
