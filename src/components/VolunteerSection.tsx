@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SectionComments from "@/components/SectionComments";
+import SectionHeader from "@/components/SectionHeader";
 import volunteerOutreach from "@/assets/volunteer-outreach.jpg";
 import volunteerTedx from "@/assets/volunteer-tedx.jpg";
 import volunteerWrsa from "@/assets/volunteer-wrsa.jpg";
@@ -106,8 +106,7 @@ const VolunteerSection = () => {
 
   return (
     <section id="volunteer" className="px-[6%] md:px-[10%] py-24 bg-background">
-      <p className="section-label">06 — Volunteer Experience</p>
-      <h2 className="section-title">Giving Back &<br /><em>Community Impact</em></h2>
+      <SectionHeader label="06 — Volunteer Experience" title={<>Giving Back &<br /><em>Community Impact</em></>} section="volunteer" />
       <div className="space-y-6">
         {volunteerExperiences.map((item, i) => (
           <div key={i} className="flex flex-col md:flex-row gap-4 md:gap-10 border-b border-border pb-6 last:border-b-0">
@@ -152,9 +151,7 @@ const VolunteerSection = () => {
           </div>
         ))}
       </div>
-      <SectionComments section="volunteer" />
 
-      {/* Lightbox */}
       {lightbox && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm cursor-pointer"
