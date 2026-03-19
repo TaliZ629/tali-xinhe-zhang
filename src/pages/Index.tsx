@@ -8,6 +8,7 @@ import ResearchSection from "@/components/ResearchSection";
 import VolunteerSection from "@/components/VolunteerSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import LiveChatWidget from "@/components/LiveChatWidget";
 
 const Index = () => (
   <>
@@ -21,6 +22,7 @@ const Index = () => (
     <VolunteerSection />
     <ContactSection />
     <Footer />
+    <LiveChatWidget />
   </>
 );
 
