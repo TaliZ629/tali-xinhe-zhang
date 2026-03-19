@@ -33,6 +33,8 @@ const education = [
   },
 ];
 
+import SectionComments from "@/components/SectionComments";
+
 const EducationSection = () => (
   <section id="education" className="px-[6%] md:px-[10%] py-24 bg-background">
     <p className="section-label">02 — Education</p>
@@ -48,6 +50,7 @@ const EducationSection = () => (
         </a>
       ))}
     </div>
+    <SectionComments section="education" />
   </section>
 );
 

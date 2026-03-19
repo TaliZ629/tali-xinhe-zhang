@@ -1,3 +1,5 @@
+import SectionComments from "@/components/SectionComments";
+
 const contacts = [
   { label: "Email", value: "xinhe629@gmail.com", href: "mailto:xinhe629@gmail.com" },
   { label: "Phone", value: "(347) 633-3897", href: "tel:+13476333897" },
@@ -24,6 +26,7 @@ const ContactSection = () => (
         </a>
       ))}
     </div>
+    <SectionComments section="contact" />
   </section>
 );
 
