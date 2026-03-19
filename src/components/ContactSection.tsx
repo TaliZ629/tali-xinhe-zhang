@@ -26,6 +26,7 @@ const ContactSection = () => (
         </a>
       ))}
     </div>
+    <SectionComments section="contact" />
   </section>
 );
 

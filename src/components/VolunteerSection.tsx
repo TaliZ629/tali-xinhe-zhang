@@ -152,6 +152,7 @@ const VolunteerSection = () => {
           </div>
         ))}
       </div>
+      <SectionComments section="volunteer" />
 
       {/* Lightbox */}
       {lightbox && (

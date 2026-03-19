@@ -41,6 +41,8 @@ const projects = [
   },
 ];
 
+import SectionComments from "@/components/SectionComments";
+
 const WorksSection = () => (
   <section id="work" className="px-[6%] md:px-[10%] py-24 bg-background">
     <p className="section-label">04 — Selected Work</p>
@@ -78,6 +80,7 @@ const WorksSection = () => (
         );
       })}
     </div>
+    <SectionComments section="work" />
   </section>
 );
 

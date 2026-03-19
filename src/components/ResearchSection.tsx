@@ -1,3 +1,5 @@
+import SectionComments from "@/components/SectionComments";
+
 const ResearchSection = () => (
   <section id="research" className="px-[6%] md:px-[10%] py-24 bg-warm-white">
     <p className="section-label">05 — Research & Publication</p>
@@ -11,6 +13,7 @@ const ResearchSection = () => (
         Analyzed a dataset of 74,111 Airbnb listings using Python and Google Colab to examine pricing drivers across location, property attributes, and demand indicators. Developed and tested a log-price regression model to quantify the relative impact of key variables on revenue performance. Research findings presented at ICFTBA 2024 and published in AEMPS proceedings.
       </p>
     </div>
+    <SectionComments section="research" />
   </section>
 );
 

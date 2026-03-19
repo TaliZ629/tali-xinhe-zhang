@@ -112,12 +112,15 @@ const ExpCategory = ({ label, items }: { label: string; items: ExpItem[] }) => (
   </div>
 );
 
+import SectionComments from "@/components/SectionComments";
+
 const ExperienceSection = () => (
   <section id="experience" className="px-[6%] md:px-[10%] py-24 bg-warm-white">
     <p className="section-label">03 — Experience</p>
     <h2 className="section-title">Where I've<br /><em>Made Impact</em></h2>
     <ExpCategory label="Technical & Analytical Work Experiences" items={technicalExp} />
     <ExpCategory label="Media & Production Professional Work Experiences" items={mediaExp} />
+    <SectionComments section="experience" />
   </section>
 );
 
