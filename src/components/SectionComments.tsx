@@ -1,32 +1,42 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ChevronDown, ChevronUp } from "lucide-react";
 
 interface Comment {
   id: string;
-  author_name: string;
   content: string;
   created_at: string;
 }
 
 const SectionComments = ({ section }: { section: string }) => {
   const [comments, setComments] = useState<Comment[]>([]);
-  const [name, setName] = useState("");
   const [content, setContent] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [count, setCount] = useState(0);
 
   const fetchComments = async () => {
     const { data } = await supabase
       .from("section_comments")
-      .select("*")
+      .select("id, content, created_at")
       .eq("section", section)
       .order("created_at", { ascending: false });
-    if (data) setComments(data);
+    if (data) {
+      setComments(data);
+      setCount(data.length);
+    }
   };
+
+  useEffect(() => {
+    // Fetch count on mount
+    supabase
+      .from("section_comments")
+      .select("id", { count: "exact", head: true })
+      .eq("section", section)
+      .then(({ count: c }) => { if (c !== null) setCount(c); });
+  }, [section]);
 
   useEffect(() => {
     if (isOpen) fetchComments();
@@ -34,11 +44,11 @@ const SectionComments = ({ section }: { section: string }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !content.trim()) return;
+    if (!content.trim()) return;
     setSubmitting(true);
     await supabase.from("section_comments").insert({
       section,
-      author_name: name.trim().slice(0, 100),
+      author_name: "Anonymous",
       content: content.trim().slice(0, 1000),
     });
     setContent("");
@@ -58,48 +68,43 @@ const SectionComments = ({ section }: { section: string }) => {
   };
 
   return (
-    <div className="mt-10 border-t border-border pt-6">
+    <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 text-[0.75rem] tracking-[0.15em] uppercase text-muted-foreground hover:text-terracotta transition-colors"
+        className="inline-flex items-center gap-1.5 text-[0.68rem] tracking-[0.12em] uppercase text-muted-foreground hover:text-terracotta transition-colors ml-3"
+        title="Toggle comments"
       >
-        <MessageCircle size={14} />
-        {isOpen ? "Hide Comments" : `Comments${comments.length > 0 ? ` (${comments.length})` : ""}`}
+        <MessageCircle size={13} />
+        {count > 0 && <span>{count}</span>}
+        {isOpen ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
       </button>
 
       {isOpen && (
-        <div className="mt-4 space-y-4 max-w-[600px]">
-          <form onSubmit={handleSubmit} className="space-y-3">
-            <Input
-              placeholder="Your name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              maxLength={100}
-              className="text-sm"
-            />
+        <div className="mt-4 mb-2 space-y-3 max-w-[560px]">
+          <form onSubmit={handleSubmit} className="flex gap-2">
             <Textarea
               placeholder="Leave a comment..."
               value={content}
               onChange={(e) => setContent(e.target.value)}
               maxLength={1000}
-              className="text-sm min-h-[60px]"
+              className="text-sm min-h-[44px] flex-1 resize-none"
+              rows={1}
             />
             <Button
               type="submit"
-              disabled={submitting || !name.trim() || !content.trim()}
+              disabled={submitting || !content.trim()}
               size="sm"
-              className="bg-terracotta text-primary-foreground hover:bg-dusty-rose text-[0.72rem] tracking-[0.1em] uppercase"
+              className="bg-terracotta text-primary-foreground hover:bg-dusty-rose text-[0.7rem] tracking-[0.08em] uppercase self-end"
             >
-              {submitting ? "Posting..." : "Post Comment"}
+              Post
             </Button>
           </form>
 
           {comments.length > 0 && (
-            <div className="space-y-3 pt-2">
+            <div className="space-y-2">
               {comments.map((c) => (
-                <div key={c.id} className="border border-border rounded-sm p-4 bg-card">
-                  <div className="flex justify-between items-baseline mb-1">
-                    <span className="text-[0.8rem] font-medium text-deep">{c.author_name}</span>
+                <div key={c.id} className="border border-border rounded-sm px-4 py-3 bg-card">
+                  <div className="flex justify-between items-baseline mb-0.5">
                     <span className="text-[0.65rem] text-light-text">{timeAgo(c.created_at)}</span>
                   </div>
                   <p className="text-[0.8rem] text-medium leading-relaxed">{c.content}</p>
@@ -109,7 +114,7 @@ const SectionComments = ({ section }: { section: string }) => {
           )}
         </div>
       )}
-    </div>
+    </>
   );
 };
 
