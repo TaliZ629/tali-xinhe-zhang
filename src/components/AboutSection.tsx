@@ -1,3 +1,5 @@
+import SectionComments from "@/components/SectionComments";
+
 const AboutSection = () => (
   <section id="about" className="px-[6%] md:px-[10%] py-24 bg-warm-white">
     <p className="section-label">01 — About</p>
