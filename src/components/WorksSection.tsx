@@ -1,5 +1,6 @@
 import thumbCapitalMarkets from "@/assets/thumb-capital-markets.png";
 import thumbSocialMedia from "@/assets/thumb-social-media.png";
+import SectionHeader from "@/components/SectionHeader";
 
 const getThumbnail = (link: string, staticThumb?: string): string | null => {
   if (staticThumb) return staticThumb;
@@ -41,12 +42,9 @@ const projects = [
   },
 ];
 
-import SectionComments from "@/components/SectionComments";
-
 const WorksSection = () => (
   <section id="work" className="px-[6%] md:px-[10%] py-24 bg-background">
-    <p className="section-label">04 — Selected Work</p>
-    <h2 className="section-title">Analytics & Storytelling<br /><em>Projects</em></h2>
+    <SectionHeader label="04 — Selected Work" title={<>Analytics & Storytelling<br /><em>Projects</em></>} section="work" />
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {projects.map((p) => {
         const thumb = getThumbnail(p.link, p.thumb);
@@ -80,7 +78,6 @@ const WorksSection = () => (
         );
       })}
     </div>
-    <SectionComments section="work" />
   </section>
 );
 
