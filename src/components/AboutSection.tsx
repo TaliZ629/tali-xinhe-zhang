@@ -9,6 +9,7 @@ const AboutSection = () => (
         I'm Tali Zhang, a cross-functional professional with experience across operations, marketing, data analytics, and media content creation — bridging Western and Chinese markets with bilingual fluency and a global mindset. I bring a unique blend of analytical thinking and creative execution. Whether optimizing budget plans, reducing purchase risks, producing corporate videos, or growing social media channels across platforms, I approach every challenge with curiosity and rigor.
       </p>
     </div>
+    <SectionComments section="about" />
   </section>
 );
 
