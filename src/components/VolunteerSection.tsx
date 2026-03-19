@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SectionComments from "@/components/SectionComments";
 import volunteerOutreach from "@/assets/volunteer-outreach.jpg";
 import volunteerTedx from "@/assets/volunteer-tedx.jpg";
 import volunteerWrsa from "@/assets/volunteer-wrsa.jpg";
