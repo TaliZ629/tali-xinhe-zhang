@@ -113,7 +113,7 @@ const ExperienceSection = () => (
       label="03 — Experience"
       title={<>Where I've<br /><em>Made Impact</em></>}
       section="experience"
-      labelExtra={<>· For detailed experience information, please feel free to <a href="#contact" className="text-dusty-rose hover:text-terracotta underline transition-colors">get in touch</a>.</>}
+      labelExtra={<><span className="inline-flex items-center mx-1">·</span> For detailed experience information, please feel free to <a href="#contact" className="text-dusty-rose hover:text-terracotta underline transition-colors">get in touch</a>.</>}
     />
     <ExpCategory label="Technical & Analytical Work Experiences" items={technicalExp} />
     <ExpCategory label="Media & Production Professional Work Experiences" items={mediaExp} />
