@@ -1,5 +1,3 @@
-import SectionHeader from "@/components/SectionHeader";
-
 const contacts = [
   { label: "Email", value: "xinhe629@gmail.com", href: "mailto:xinhe629@gmail.com" },
   { label: "Phone", value: "(347) 633-3897", href: "tel:+13476333897" },
@@ -9,9 +7,9 @@ const contacts = [
 
 const ContactSection = () => (
   <section id="contact" className="px-[6%] md:px-[10%] py-24 bg-warm-white text-center">
-    <SectionHeader label="07 — Contact" title={<>Let's <em>Connect</em></>} section="contact" center />
+    <h2 className="section-title mb-12">Let's <em>Connect</em></h2>
     
-    <div className="grid grid-cols-2 gap-6 mt-8 max-w-[440px] mx-auto">
+    <div className="grid grid-cols-2 gap-6 max-w-[440px] mx-auto">
       {contacts.map(({ label, value, href }) => (
         <a
           key={label}
