@@ -15,6 +15,8 @@ interface SectionCommentsContextValue {
   setIsOpen: (v: boolean) => void;
   count: number;
   comments: Comment[];
+  authorName: string;
+  setAuthorName: (v: string) => void;
   content: string;
   setContent: (v: string) => void;
   submitting: boolean;
@@ -25,6 +27,7 @@ const SectionCommentsContext = createContext<SectionCommentsContextValue | null>
 
 export const SectionCommentsProvider = ({ section, children }: { section: string; children: React.ReactNode }) => {
   const [comments, setComments] = useState<Comment[]>([]);
+  const [authorName, setAuthorName] = useState("");
   const [content, setContent] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -56,11 +59,11 @@ export const SectionCommentsProvider = ({ section, children }: { section: string
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!content.trim()) return;
+    if (!content.trim() || !authorName.trim()) return;
     setSubmitting(true);
     await supabase.from("section_comments").insert({
       section,
-      author_name: "Anonymous",
+      author_name: authorName.trim().slice(0, 100),
       content: content.trim().slice(0, 1000),
     });
     setContent("");
@@ -69,7 +72,7 @@ export const SectionCommentsProvider = ({ section, children }: { section: string
   };
 
   return (
-    <SectionCommentsContext.Provider value={{ isOpen, setIsOpen, count, comments, content, setContent, submitting, handleSubmit }}>
+    <SectionCommentsContext.Provider value={{ isOpen, setIsOpen, count, comments, authorName, setAuthorName, content, setContent, submitting, handleSubmit }}>
       {children}
     </SectionCommentsContext.Provider>
   );
@@ -97,7 +100,7 @@ export const CommentsTrigger = () => {
 export const CommentsContent = () => {
   const ctx = useContext(SectionCommentsContext);
   if (!ctx || !ctx.isOpen) return null;
-  const { comments, content, setContent, submitting, handleSubmit } = ctx;
+  const { comments, authorName, setAuthorName, content, setContent, submitting, handleSubmit } = ctx;
 
   const timeAgo = (date: string) => {
     const diff = Date.now() - new Date(date).getTime();
@@ -112,23 +115,33 @@ export const CommentsContent = () => {
 
   return (
     <div className="mt-4 mb-2 space-y-3 max-w-[560px]">
-      <form onSubmit={handleSubmit} className="flex gap-2">
-        <Textarea
-          placeholder="Leave a comment..."
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-          maxLength={1000}
-          className="text-sm min-h-[44px] flex-1 resize-none"
-          rows={1}
+      <form onSubmit={handleSubmit} className="space-y-2">
+        <input
+          type="text"
+          placeholder="Your name"
+          value={authorName}
+          onChange={(e) => setAuthorName(e.target.value)}
+          maxLength={100}
+          className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         />
-        <Button
-          type="submit"
-          disabled={submitting || !content.trim()}
-          size="sm"
-          className="bg-terracotta text-primary-foreground hover:bg-dusty-rose text-[0.7rem] tracking-[0.08em] uppercase self-end"
-        >
-          Post
-        </Button>
+        <div className="flex gap-2">
+          <Textarea
+            placeholder="Leave a comment..."
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+            maxLength={1000}
+            className="text-sm min-h-[44px] flex-1 resize-none"
+            rows={1}
+          />
+          <Button
+            type="submit"
+            disabled={submitting || !content.trim() || !authorName.trim()}
+            size="sm"
+            className="bg-terracotta text-primary-foreground hover:bg-dusty-rose text-[0.7rem] tracking-[0.08em] uppercase self-end"
+          >
+            Post
+          </Button>
+        </div>
       </form>
 
       {comments.length > 0 && (
