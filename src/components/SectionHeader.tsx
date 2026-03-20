@@ -13,9 +13,9 @@ const SectionHeader = ({ label, title, section, center }: SectionHeaderProps) =>
       <div className="flex items-baseline flex-wrap gap-0">
         <p className="section-label">{label}</p>
       </div>
-      <div className="flex items-baseline flex-wrap gap-0">
-        <h2 className="section-title mb-0">{title}</h2>
-        <CommentsTrigger />
+      <div>
+        <h2 className="section-title mb-0 inline">{title}</h2>
+        <span className="inline-flex align-baseline"><CommentsTrigger /></span>
       </div>
       <CommentsContent />
       <div className="mb-12" />
