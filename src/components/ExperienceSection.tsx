@@ -98,14 +98,7 @@ const ExpCategory = ({ label, items }: { label: string; items: ExpItem[] }) => (
           <p className="text-[0.72rem] text-light-text italic">{item.location}</p>
         </div>
         <div>
-          <p className="text-[1.15rem] font-medium text-deep mb-3">{item.role}</p>
-          <ul className="list-none p-0">
-            {item.bullets.map((b, i) => (
-              <li key={i} className="text-[0.85rem] text-medium leading-[1.7] pl-4 relative mb-1.5 before:content-['—'] before:absolute before:left-0 before:text-blush">
-                {b}
-              </li>
-            ))}
-          </ul>
+          <p className="text-[1.15rem] font-medium text-deep">{item.role}</p>
         </div>
       </div>
     ))}
@@ -116,7 +109,10 @@ import SectionHeader from "@/components/SectionHeader";
 
 const ExperienceSection = () => (
   <section id="experience" className="px-[6%] md:px-[10%] py-24 bg-warm-white">
-    <SectionHeader label="03 — Experience" title={<>Where I've<br /><em>Made Impact</em></>} section="experience" />
+    <div className="flex items-baseline gap-4 flex-wrap mb-2">
+      <SectionHeader label="03 — Experience" title={<>Where I've<br /><em>Made Impact</em></>} section="experience" />
+    </div>
+    <p className="text-[0.82rem] text-light-text italic mb-12">For detailed experience information, please feel free to <a href="#contact" className="text-dusty-rose hover:text-terracotta underline transition-colors">get in touch</a>.</p>
     <ExpCategory label="Technical & Analytical Work Experiences" items={technicalExp} />
     <ExpCategory label="Media & Production Professional Work Experiences" items={mediaExp} />
   </section>
