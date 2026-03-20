@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext, useContext } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -10,7 +10,20 @@ interface Comment {
   created_at: string;
 }
 
-const SectionComments = ({ section }: { section: string }) => {
+interface SectionCommentsContextValue {
+  isOpen: boolean;
+  setIsOpen: (v: boolean) => void;
+  count: number;
+  comments: Comment[];
+  content: string;
+  setContent: (v: string) => void;
+  submitting: boolean;
+  handleSubmit: (e: React.FormEvent) => void;
+}
+
+const SectionCommentsContext = createContext<SectionCommentsContextValue | null>(null);
+
+export const SectionCommentsProvider = ({ section, children }: { section: string; children: React.ReactNode }) => {
   const [comments, setComments] = useState<Comment[]>([]);
   const [content, setContent] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +43,6 @@ const SectionComments = ({ section }: { section: string }) => {
   };
 
   useEffect(() => {
-    // Fetch count on mount
     supabase
       .from("section_comments")
       .select("id", { count: "exact", head: true })
@@ -56,6 +68,36 @@ const SectionComments = ({ section }: { section: string }) => {
     setSubmitting(false);
   };
 
+  return (
+    <SectionCommentsContext.Provider value={{ isOpen, setIsOpen, count, comments, content, setContent, submitting, handleSubmit }}>
+      {children}
+    </SectionCommentsContext.Provider>
+  );
+};
+
+export const CommentsTrigger = () => {
+  const ctx = useContext(SectionCommentsContext);
+  if (!ctx) return null;
+  const { isOpen, setIsOpen, count } = ctx;
+
+  return (
+    <button
+      onClick={() => setIsOpen(!isOpen)}
+      className="inline-flex items-center gap-1.5 text-[0.68rem] tracking-[0.12em] uppercase text-muted-foreground hover:text-terracotta transition-colors ml-3"
+      title="Toggle comments"
+    >
+      <MessageCircle size={13} />
+      {count > 0 && <span>{count}</span>}
+      {isOpen ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
+    </button>
+  );
+};
+
+export const CommentsContent = () => {
+  const ctx = useContext(SectionCommentsContext);
+  if (!ctx || !ctx.isOpen) return null;
+  const { comments, content, setContent, submitting, handleSubmit } = ctx;
+
   const timeAgo = (date: string) => {
     const diff = Date.now() - new Date(date).getTime();
     const mins = Math.floor(diff / 60000);
@@ -68,54 +110,40 @@ const SectionComments = ({ section }: { section: string }) => {
   };
 
   return (
-    <>
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="inline-flex items-center gap-1.5 text-[0.68rem] tracking-[0.12em] uppercase text-muted-foreground hover:text-terracotta transition-colors ml-3"
-        title="Toggle comments"
-      >
-        <MessageCircle size={13} />
-        {count > 0 && <span>{count}</span>}
-        {isOpen ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
-      </button>
+    <div className="mt-4 mb-2 space-y-3 max-w-[560px]">
+      <form onSubmit={handleSubmit} className="flex gap-2">
+        <Textarea
+          placeholder="Leave a comment..."
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          maxLength={1000}
+          className="text-sm min-h-[44px] flex-1 resize-none"
+          rows={1}
+        />
+        <Button
+          type="submit"
+          disabled={submitting || !content.trim()}
+          size="sm"
+          className="bg-terracotta text-primary-foreground hover:bg-dusty-rose text-[0.7rem] tracking-[0.08em] uppercase self-end"
+        >
+          Post
+        </Button>
+      </form>
 
-      {isOpen && (
-        <div className="mt-4 mb-2 space-y-3 max-w-[560px]">
-          <form onSubmit={handleSubmit} className="flex gap-2">
-            <Textarea
-              placeholder="Leave a comment..."
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              maxLength={1000}
-              className="text-sm min-h-[44px] flex-1 resize-none"
-              rows={1}
-            />
-            <Button
-              type="submit"
-              disabled={submitting || !content.trim()}
-              size="sm"
-              className="bg-terracotta text-primary-foreground hover:bg-dusty-rose text-[0.7rem] tracking-[0.08em] uppercase self-end"
-            >
-              Post
-            </Button>
-          </form>
-
-          {comments.length > 0 && (
-            <div className="space-y-2">
-              {comments.map((c) => (
-                <div key={c.id} className="border border-border rounded-sm px-4 py-3 bg-card">
-                  <div className="flex justify-between items-baseline mb-0.5">
-                    <span className="text-[0.65rem] text-light-text">{timeAgo(c.created_at)}</span>
-                  </div>
-                  <p className="text-[0.8rem] text-medium leading-relaxed">{c.content}</p>
-                </div>
-              ))}
+      {comments.length > 0 && (
+        <div className="space-y-2">
+          {comments.map((c) => (
+            <div key={c.id} className="border border-border rounded-sm px-4 py-3 bg-card">
+              <div className="flex justify-between items-baseline mb-0.5">
+                <span className="text-[0.65rem] text-light-text">{timeAgo(c.created_at)}</span>
+              </div>
+              <p className="text-[0.8rem] text-medium leading-relaxed">{c.content}</p>
             </div>
-          )}
+          ))}
         </div>
       )}
-    </>
+    </div>
   );
 };
 
-export default SectionComments;
+export default CommentsTrigger;
