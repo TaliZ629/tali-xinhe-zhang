@@ -24,7 +24,7 @@ const technicalExp: ExpItem[] = [
     date: "08/2021 – 12/2021",
     company: "Wicresoft",
     location: "Shanghai, China",
-    role: "Microsoft Azure & Dynamics CRM — Customer Service Quality Assurance",
+    role: "Customer Support Operations Analyst",
     bullets: [
       "Managed enterprise support case documentation in Microsoft Dynamics 365 and SharePoint, ensuring accuracy in technical support case timelines, escalation paths, and resolution tracking.",
       "Identified recurring case bottlenecks and coordinated process adjustments to improve engineers' service response efficiency.",
