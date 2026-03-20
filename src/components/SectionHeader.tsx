@@ -15,7 +15,7 @@ const SectionHeader = ({ label, title, section, center }: SectionHeaderProps) =>
       </div>
       <div>
         <h2 className="section-title mb-0 inline">{title}</h2>
-        <span className="inline-flex align-baseline"><CommentsTrigger /></span>
+        <span className="inline-flex align-baseline ml-4"><CommentsTrigger /></span>
       </div>
       <CommentsContent />
       <div className="mb-12" />
