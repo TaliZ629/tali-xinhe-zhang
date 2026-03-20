@@ -15,6 +15,8 @@ interface SectionCommentsContextValue {
   setIsOpen: (v: boolean) => void;
   count: number;
   comments: Comment[];
+  authorName: string;
+  setAuthorName: (v: string) => void;
   content: string;
   setContent: (v: string) => void;
   submitting: boolean;
