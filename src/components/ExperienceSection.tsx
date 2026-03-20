@@ -24,7 +24,7 @@ const technicalExp: ExpItem[] = [
     date: "08/2021 – 12/2021",
     company: "Wicresoft",
     location: "Shanghai, China",
-    role: "Microsoft Azure & Dynamics CRM — Customer Service Quality Assurance",
+    role: "Customer Support Operations Analyst",
     bullets: [
       "Managed enterprise support case documentation in Microsoft Dynamics 365 and SharePoint, ensuring accuracy in technical support case timelines, escalation paths, and resolution tracking.",
       "Identified recurring case bottlenecks and coordinated process adjustments to improve engineers' service response efficiency.",
@@ -34,7 +34,7 @@ const technicalExp: ExpItem[] = [
     date: "05/2020 – 06/2021",
     company: "Cheering Consulting",
     location: "Guangzhou, China",
-    role: "Intellectual Property Case Specialist",
+    role: "Intellectual Property Projects & Client Coordination Specialist",
     bullets: [
       "Managed intellectual property case workflows by coordinating client requirements, third-party agencies, and internal teams for enterprise clients including Nike, Medtronic, and 3M.",
       "Produced 12+ bilingual analytical reports summarizing issue patterns, risks, required actions, resolution progress, and client impact.",
@@ -48,7 +48,7 @@ const mediaExp: ExpItem[] = [
     date: "10/2019 – 02/2020",
     company: "ASDC",
     location: "Beijing, China",
-    role: "Tencent CSIG & BMW ADDP — Project and Marketing Specialist",
+    role: "Tencent CSIG & BMW ADDP Project and Marketing Specialist",
     bullets: [
       "Produced and edited promotional sizzle videos using Adobe Creative Cloud for the BMW Group China High-Performance D3 Platform Go-Live Ceremony.",
       "Coordinated and hosted domestic and international guests for corporate events, including conferences and data center site visits.",
