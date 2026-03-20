@@ -72,7 +72,7 @@ export const SectionCommentsProvider = ({ section, children }: { section: string
   };
 
   return (
-    <SectionCommentsContext.Provider value={{ isOpen, setIsOpen, count, comments, content, setContent, submitting, handleSubmit }}>
+    <SectionCommentsContext.Provider value={{ isOpen, setIsOpen, count, comments, authorName, setAuthorName, content, setContent, submitting, handleSubmit }}>
       {children}
     </SectionCommentsContext.Provider>
   );
