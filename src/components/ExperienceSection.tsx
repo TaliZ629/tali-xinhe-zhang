@@ -109,10 +109,12 @@ import SectionHeader from "@/components/SectionHeader";
 
 const ExperienceSection = () => (
   <section id="experience" className="px-[6%] md:px-[10%] py-24 bg-warm-white">
-    <div className="flex items-baseline gap-4 flex-wrap mb-2">
-      <SectionHeader label="03 — Experience" title={<>Where I've<br /><em>Made Impact</em></>} section="experience" />
-    </div>
-    <p className="text-[0.82rem] text-light-text italic mb-12">For detailed experience information, please feel free to <a href="#contact" className="text-dusty-rose hover:text-terracotta underline transition-colors">get in touch</a>.</p>
+    <SectionHeader
+      label="03 — Experience"
+      title={<>Where I've<br /><em>Made Impact</em></>}
+      section="experience"
+      labelExtra={<>For detailed experience information, please feel free to <a href="#contact" className="text-dusty-rose hover:text-terracotta underline transition-colors">get in touch</a>.</>}
+    />
     <ExpCategory label="Technical & Analytical Work Experiences" items={technicalExp} />
     <ExpCategory label="Media & Production Professional Work Experiences" items={mediaExp} />
   </section>
