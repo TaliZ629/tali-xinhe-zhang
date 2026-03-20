@@ -59,11 +59,11 @@ export const SectionCommentsProvider = ({ section, children }: { section: string
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!content.trim()) return;
+    if (!content.trim() || !authorName.trim()) return;
     setSubmitting(true);
     await supabase.from("section_comments").insert({
       section,
-      author_name: "Anonymous",
+      author_name: authorName.trim().slice(0, 100),
       content: content.trim().slice(0, 1000),
     });
     setContent("");
