@@ -27,6 +27,7 @@ const SectionCommentsContext = createContext<SectionCommentsContextValue | null>
 
 export const SectionCommentsProvider = ({ section, children }: { section: string; children: React.ReactNode }) => {
   const [comments, setComments] = useState<Comment[]>([]);
+  const [authorName, setAuthorName] = useState("");
   const [content, setContent] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
