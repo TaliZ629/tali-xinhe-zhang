@@ -1,0 +1,1 @@
+DELETE FROM public.section_comments WHERE id IN ('29b7da91-9002-45bc-af63-6ff09fb87f75', 'd6120d44-6c36-4a41-a080-2f910e141e3a');
