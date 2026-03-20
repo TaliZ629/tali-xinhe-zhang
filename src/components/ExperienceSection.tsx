@@ -48,7 +48,7 @@ const mediaExp: ExpItem[] = [
     date: "10/2019 – 02/2020",
     company: "ASDC",
     location: "Beijing, China",
-    role: "Tencent CSIG & BMW ADDP — Project and Marketing Specialist",
+    role: "Tencent CSIG & BMW ADDP Project and Marketing Specialist",
     bullets: [
       "Produced and edited promotional sizzle videos using Adobe Creative Cloud for the BMW Group China High-Performance D3 Platform Go-Live Ceremony.",
       "Coordinated and hosted domestic and international guests for corporate events, including conferences and data center site visits.",

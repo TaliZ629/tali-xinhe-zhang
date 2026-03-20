@@ -124,20 +124,20 @@ export const CommentsContent = () => {
           maxLength={100}
           className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         />
-        <div className="flex gap-2">
-          <Textarea
-            placeholder="Leave a comment..."
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            maxLength={1000}
-            className="text-sm min-h-[44px] flex-1 resize-none"
-            rows={1}
-          />
+        <Textarea
+          placeholder="Leave a comment..."
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          maxLength={1000}
+          className="text-sm min-h-[44px] resize-none"
+          rows={1}
+        />
+        <div className="flex justify-end">
           <Button
             type="submit"
             disabled={submitting || !content.trim() || !authorName.trim()}
             size="sm"
-            className="bg-terracotta text-primary-foreground hover:bg-dusty-rose text-[0.7rem] tracking-[0.08em] uppercase self-end"
+            className="bg-terracotta text-primary-foreground hover:bg-dusty-rose text-[0.7rem] tracking-[0.08em] uppercase"
           >
             Post
           </Button>
