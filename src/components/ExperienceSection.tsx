@@ -34,7 +34,7 @@ const technicalExp: ExpItem[] = [
     date: "05/2020 – 06/2021",
     company: "Cheering Consulting",
     location: "Guangzhou, China",
-    role: "Intellectual Property Case Specialist",
+    role: "Intellectual Property Projects & Client Coordination Specialist",
     bullets: [
       "Managed intellectual property case workflows by coordinating client requirements, third-party agencies, and internal teams for enterprise clients including Nike, Medtronic, and 3M.",
       "Produced 12+ bilingual analytical reports summarizing issue patterns, risks, required actions, resolution progress, and client impact.",
