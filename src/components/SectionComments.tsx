@@ -100,7 +100,7 @@ export const CommentsTrigger = () => {
 export const CommentsContent = () => {
   const ctx = useContext(SectionCommentsContext);
   if (!ctx || !ctx.isOpen) return null;
-  const { comments, content, setContent, submitting, handleSubmit } = ctx;
+  const { comments, authorName, setAuthorName, content, setContent, submitting, handleSubmit } = ctx;
 
   const timeAgo = (date: string) => {
     const diff = Date.now() - new Date(date).getTime();
@@ -115,23 +115,33 @@ export const CommentsContent = () => {
 
   return (
     <div className="mt-4 mb-2 space-y-3 max-w-[560px]">
-      <form onSubmit={handleSubmit} className="flex gap-2">
-        <Textarea
-          placeholder="Leave a comment..."
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-          maxLength={1000}
-          className="text-sm min-h-[44px] flex-1 resize-none"
-          rows={1}
+      <form onSubmit={handleSubmit} className="space-y-2">
+        <input
+          type="text"
+          placeholder="Your name"
+          value={authorName}
+          onChange={(e) => setAuthorName(e.target.value)}
+          maxLength={100}
+          className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         />
-        <Button
-          type="submit"
-          disabled={submitting || !content.trim()}
-          size="sm"
-          className="bg-terracotta text-primary-foreground hover:bg-dusty-rose text-[0.7rem] tracking-[0.08em] uppercase self-end"
-        >
-          Post
-        </Button>
+        <div className="flex gap-2">
+          <Textarea
+            placeholder="Leave a comment..."
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+            maxLength={1000}
+            className="text-sm min-h-[44px] flex-1 resize-none"
+            rows={1}
+          />
+          <Button
+            type="submit"
+            disabled={submitting || !content.trim() || !authorName.trim()}
+            size="sm"
+            className="bg-terracotta text-primary-foreground hover:bg-dusty-rose text-[0.7rem] tracking-[0.08em] uppercase self-end"
+          >
+            Post
+          </Button>
+        </div>
       </form>
 
       {comments.length > 0 && (
