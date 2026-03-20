@@ -58,7 +58,7 @@ const mediaExp: ExpItem[] = [
     date: "02/2019 – 08/2019",
     company: "Weidong Group, Weidong Cloud Education",
     location: "Beijing, China",
-    role: "Course Research & Development Manager — France Brest Business School Programs",
+    role: "Content Producer and Marketing Specialist for France Brest Business School Business Programs",
     bullets: [
       "Produced high-quality educational video content of 8 MBA courses, 11 Big Data Specialized Master's courses, and 4 additional programs by partnering with editors to ensure brand consistency and on-schedule release.",
       "Communicated with domestic and foreign professors on course contents to ensure clarity and organization before filming.",
