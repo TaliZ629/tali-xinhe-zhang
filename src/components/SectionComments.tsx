@@ -132,7 +132,7 @@ export const CommentsContent = () => {
           className="text-sm min-h-[44px] resize-none"
           rows={1}
         />
-        <div className="flex justify-end">
+        <div className="flex justify-start">
           <Button
             type="submit"
             disabled={submitting || !content.trim() || !authorName.trim()}
