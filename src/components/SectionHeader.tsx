@@ -11,10 +11,9 @@ interface SectionHeaderProps {
 const SectionHeader = ({ label, title, section, center, labelExtra }: SectionHeaderProps) => (
   <SectionCommentsProvider section={section}>
     <div className={center ? "text-center" : ""}>
-      <div className="flex items-center flex-wrap gap-0">
-        <p className="section-label mb-0">{label}</p>
-        {labelExtra && <span className="mx-3 text-light-text text-[0.65rem] select-none">·</span>}
-        {labelExtra && <span className="text-[0.72rem] tracking-wide text-light-text">{labelExtra}</span>}
+      <div className="flex items-baseline flex-wrap gap-0">
+        <p className="section-label">{label}</p>
+        {labelExtra && <span className="ml-3 text-[0.82rem] text-light-text italic">{labelExtra}</span>}
       </div>
       <div>
         <h2 className="section-title mb-0 inline">{title}</h2>
