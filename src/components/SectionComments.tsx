@@ -83,12 +83,13 @@ export const CommentsTrigger = () => {
   return (
     <button
       onClick={() => setIsOpen(!isOpen)}
-      className="inline-flex items-center gap-1.5 text-[0.68rem] tracking-[0.12em] uppercase text-muted-foreground hover:text-terracotta transition-colors ml-3"
+      className="inline-flex items-center gap-2 text-muted-foreground hover:text-terracotta transition-colors"
       title="Toggle comments"
+      style={{ fontSize: 'clamp(1.6rem, 2.8vw, 2.4rem)' }}
     >
-      <MessageCircle size={13} />
-      {count > 0 && <span>{count}</span>}
-      {isOpen ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
+      <MessageCircle className="w-[1em] h-[1em]" />
+      {count > 0 && <span className="text-[0.4em] tracking-[0.12em] uppercase">{count}</span>}
+      {isOpen ? <ChevronUp className="w-[0.5em] h-[0.5em]" /> : <ChevronDown className="w-[0.5em] h-[0.5em]" />}
     </button>
   );
 };
