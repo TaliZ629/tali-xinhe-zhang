@@ -11,7 +11,7 @@ const technicalExp: ExpItem[] = [
     date: "12/2021 – 01/2025",
     company: "Celestica",
     location: "Shanghai, China",
-    role: "Operations Analyst — Procurement & Operational Analytics",
+    role: "Operations Analyst",
     bullets: [
       "Reviewed 1,562 purchase orders totaling $82M across Asia and North America to ensure financial compliance with internal policies and budget guidelines, reducing operational risk prior to management's spending approval.",
       "Streamlined cross-functional operational workflows using ServiceNow and Ivalua with procurement, program management and finance teams to optimize spending strategy while improving production efficiency.",
