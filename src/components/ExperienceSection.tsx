@@ -13,11 +13,9 @@ const technicalExp: ExpItem[] = [
     location: "Shanghai, China",
     role: "Operations Analyst",
     bullets: [
-      "Reviewed 1,562 purchase orders totaling $82M across Asia and North America to ensure financial compliance with internal policies and budget guidelines, reducing operational risk prior to management's spending approval.",
-      "Streamlined cross-functional operational workflows using ServiceNow and Ivalua with procurement, program management and finance teams to optimize spending strategy while improving production efficiency.",
-      "Built quarterly Capex tracking reports in Excel and Google Sheets to monitor global spending and support leadership budget decisions.",
-      "Conducted pricing analysis and negotiations for a $1.3M equipment purchase, contributing to $216K in negotiated savings.",
-      "Coordinated and executed large-scale (300–500 participants) bilingual corporate campaigns and events.",
+      "Cost Optimization",
+      "Risk control through process execution",
+      "Cross-Regional and cross functional Coordination",
     ],
   },
   {
@@ -26,19 +24,20 @@ const technicalExp: ExpItem[] = [
     location: "Shanghai, China",
     role: "Customer Support Operations Analyst",
     bullets: [
-      "Managed enterprise support case documentation in Microsoft Dynamics 365 and SharePoint, ensuring accuracy in technical support case timelines, escalation paths, and resolution tracking.",
-      "Identified recurring case bottlenecks and coordinated process adjustments to improve engineers' service response efficiency.",
+      "Weekly Performance Reporting/dashboards/presentation",
+      "Problem identification and root cause analysis",
+      "Improvement execution on Platform IT Service Operations",
     ],
   },
   {
     date: "05/2020 – 06/2021",
     company: "Cheering Consulting",
     location: "Guangzhou, China",
-    role: "Intellectual Property Projects & Client Coordination Specialist",
+    role: "Intellectual Property Case Consultant",
     bullets: [
-      "Managed intellectual property case workflows by coordinating client requirements, third-party agencies, and internal teams for enterprise clients including Nike, Medtronic, and 3M.",
-      "Produced 12+ bilingual analytical reports summarizing issue patterns, risks, required actions, resolution progress, and client impact.",
-      "Worked with notary offices to validate product documentation with supporting materials to ensure compliance with regulatory standards.",
+      "Comprehensive investigative research",
+      "Case assessment and strategic planning",
+      "Intellectual Property Enforcement Support",
     ],
   },
 ];
@@ -50,18 +49,20 @@ const mediaExp: ExpItem[] = [
     location: "Beijing, China",
     role: "Tencent CSIG & BMW ADDP Project and Marketing Specialist",
     bullets: [
-      "Produced and edited promotional sizzle videos using Adobe Creative Cloud for the BMW Group China High-Performance D3 Platform Go-Live Ceremony.",
-      "Coordinated and hosted domestic and international guests for corporate events, including conferences and data center site visits.",
+      "Client Engagement",
+      "Project coordination and strategic execution",
+      "Visual production and brand delivery",
     ],
   },
   {
     date: "02/2019 – 08/2019",
     company: "Weidong Group, Weidong Cloud Education",
     location: "Beijing, China",
-    role: "Content Producer and Marketing Specialist for France Brest Business School Business Programs",
+    role: "Weidong Group — Course Content R&D Manager for France Brest Business School Business Programs",
     bullets: [
-      "Produced high-quality educational video content of 8 MBA courses, 11 Big Data Specialized Master's courses, and 4 additional programs by partnering with editors to ensure brand consistency and on-schedule release.",
-      "Communicated with domestic and foreign professors on course contents to ensure clarity and organization before filming.",
+      "Focused Educational Content Strategy",
+      "Production Execution",
+      "Delivery Management",
     ],
   },
   {
@@ -70,19 +71,20 @@ const mediaExp: ExpItem[] = [
     location: "Beijing, China",
     role: "Content Producer Intern",
     bullets: [
-      "Researched and curated daily international news and trending social topics; wrote scripts and independently produced video content using Adobe applications.",
-      "Team produced a video achieving 54 million total online views during the 2018 World Cup season.",
-      'Received "The Most Valuable Content Dedication Award" from CCTV.',
+      "Strategic Content Development",
+      "Quick Trend Responsiveness",
+      "On-time Story Delivery",
     ],
   },
   {
     date: "10/2016 – 04/2017",
     company: "JJ Printing & Packaging",
     location: "Santa Fe Springs, CA",
-    role: "Digital Content Editor and Print Technician",
+    role: "Digital Content Editor",
     bullets: [
-      "Communicated with clients to confirm deadlines and changes; used Adobe applications and Microsoft Office to edit files and samples.",
-      "Operated Sakurai offset and digital printing equipment independently; calibrated and ran digital machines daily.",
+      "Effective client coordination",
+      "Technical Design Operations",
+      "Output Quality Control",
     ],
   },
 ];
@@ -99,6 +101,13 @@ const ExpCategory = ({ label, items }: { label: string; items: ExpItem[] }) => (
         </div>
         <div>
           <p className="text-[1.15rem] font-medium text-deep">{item.role}</p>
+          <ul className="mt-2 space-y-1">
+            {item.bullets.map((b, i) => (
+              <li key={i} className="text-[0.82rem] text-light-text leading-relaxed">
+                — {b}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     ))}
