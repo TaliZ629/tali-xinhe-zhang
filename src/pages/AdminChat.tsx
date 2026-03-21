@@ -26,6 +26,7 @@ const AdminChat = () => {
   const [reply, setReply] = useState("");
   const [sending, setSending] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
+  useAdminNotifications();
 
   // Fetch conversations
   useEffect(() => {
