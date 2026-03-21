@@ -25,9 +25,7 @@ const volunteerExperiences: VolunteerExp[] = [
     role: "Volunteer Storyteller & Community Outreach Participant",
     subtitle: "A Storytelling Session in the Elementary School Community Outreach Program for Left-Behind Children",
     bullets: [
-      "Visited an elementary school with the company's social work club to support left-behind children through an engaging educational storytelling activity",
-      "Shared How to Make an Apple Pie and See the World to help students appreciate the beauty of small moments and expand their imagination beyond their environment",
-      "Led interactive discussions, encouraged curiosity, and helped foster confidence, emotional expression, and a sense of connection to the broader world",
+      "Facilitated an interactive storytelling activity for left-behind children during a school outreach visit, encouraging curiosity, discussion, and connection through a fascinating story How to Make an Apple Pie and See the World",
     ],
     media: { type: "image", src: volunteerOutreach, alt: "Community Outreach Program storytelling session" },
   },
