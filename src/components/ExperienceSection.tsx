@@ -104,7 +104,7 @@ const ExpCategory = ({ label, items }: { label: string; items: ExpItem[] }) => (
           <ul className="mt-2 space-y-1">
             {item.bullets.map((b, i) => (
               <li key={i} className="text-[0.82rem] text-light-text leading-relaxed">
-                — {b}
+                – {b}
               </li>
             ))}
           </ul>
