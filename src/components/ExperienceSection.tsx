@@ -24,9 +24,9 @@ const technicalExp: ExpItem[] = [
     location: "Shanghai, China",
     role: "Customer Support Operations Analyst",
     bullets: [
-      "Weekly Performance Reporting/dashboards/presentation",
-      "Problem identification and root cause analysis",
-      "Improvement execution on Platform IT Service Operations",
+      "Weekly Performance Reporting with Dashboards and Presentation",
+      "Problem Identification and Root Cause Analysis",
+      "Improvement Execution on Platform IT Service Operations",
     ],
   },
   {
