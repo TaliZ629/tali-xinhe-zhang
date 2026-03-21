@@ -59,7 +59,6 @@ const volunteerExperiences: VolunteerExp[] = [
     subtitle: "13th Chinese Returned Scholars Innovation & Entrepreneurship Forum — Beijing Forum of WRSA",
     bullets: [
       "Selected as one of 18 volunteers from an international pool of 14,000 applicants for the largest annual WRSA conference, with 800+ attendees and 50+ leading executives, entrepreneurs, and scholars",
-      "Served as media group assistant, fielding questions and providing materials for guests; conference coverage published on CCTV, Xinhua, China Daily, Sohu, Sina, and China.com",
     ],
     media: { type: "image", src: volunteerWrsa, alt: "WRSA & CCG Beijing Forum volunteer group photo" },
   },
