@@ -15,7 +15,7 @@ const technicalExp: ExpItem[] = [
     bullets: [
       "Cost Optimization",
       "Risk Control through Process Execution",
-      "Cross-Regional and Cross Functional Coordination",
+      "Cross Regional and Cross Functional Coordination",
     ],
   },
   {
