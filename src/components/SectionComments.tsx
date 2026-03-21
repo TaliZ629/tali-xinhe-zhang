@@ -37,7 +37,7 @@ export const SectionCommentsProvider = ({ section, children }: { section: string
   const fetchComments = async () => {
     const { data } = await supabase
       .from("section_comments")
-      .select("id, content, created_at")
+      .select("id, author_name, content, created_at")
       .eq("section", section)
       .order("created_at", { ascending: false });
     if (data) {
