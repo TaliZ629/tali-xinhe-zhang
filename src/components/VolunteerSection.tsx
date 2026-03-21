@@ -25,9 +25,7 @@ const volunteerExperiences: VolunteerExp[] = [
     role: "Volunteer Storyteller & Community Outreach Participant",
     subtitle: "A Storytelling Session in the Elementary School Community Outreach Program for Left-Behind Children",
     bullets: [
-      "Visited an elementary school with the company's social work club to support left-behind children through an engaging educational storytelling activity",
-      "Shared How to Make an Apple Pie and See the World to help students appreciate the beauty of small moments and expand their imagination beyond their environment",
-      "Led interactive discussions, encouraged curiosity, and helped foster confidence, emotional expression, and a sense of connection to the broader world",
+      "Facilitated an interactive storytelling activity for left-behind children during a school outreach visit, encouraging curiosity, discussion, and connection through a fascinating story How to Make an Apple Pie and See the World",
     ],
     media: { type: "image", src: volunteerOutreach, alt: "Community Outreach Program storytelling session" },
   },
@@ -38,8 +36,7 @@ const volunteerExperiences: VolunteerExp[] = [
     role: "Post-Production Editor / Event Production Assistant",
     subtitle: "TEDxTurtleRock: Ideas Unchained",
     bullets: [
-      "Edited TEDx TurtleRock event videos and assisted the organizer in designing the event setup and activities",
-      "Created digital and print materials including posters, flyers, presentations, and motion graphics",
+      "Produced video content and designed visual materials for TEDx TurtleRock, supporting event setup, audience activities, and brand-consistent communication across digital and print formats",
     ],
     media: { type: "image", src: volunteerTedx, alt: "TEDxTurtleRock: Ideas Unchained group photo" },
   },
@@ -62,7 +59,6 @@ const volunteerExperiences: VolunteerExp[] = [
     subtitle: "13th Chinese Returned Scholars Innovation & Entrepreneurship Forum — Beijing Forum of WRSA",
     bullets: [
       "Selected as one of 18 volunteers from an international pool of 14,000 applicants for the largest annual WRSA conference, with 800+ attendees and 50+ leading executives, entrepreneurs, and scholars",
-      "Served as media group assistant, fielding questions and providing materials for guests; conference coverage published on CCTV, Xinhua, China Daily, Sohu, Sina, and China.com",
     ],
     media: { type: "image", src: volunteerWrsa, alt: "WRSA & CCG Beijing Forum volunteer group photo" },
   },
