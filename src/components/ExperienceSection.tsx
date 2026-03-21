@@ -82,7 +82,7 @@ const mediaExp: ExpItem[] = [
     location: "Santa Fe Springs, CA",
     role: "Digital Content Editor",
     bullets: [
-      "Effective client coordination",
+      "Effective Client Coordination",
       "Technical Design Operations",
       "Output Quality Control",
     ],
