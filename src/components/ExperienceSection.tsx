@@ -50,8 +50,8 @@ const mediaExp: ExpItem[] = [
     role: "Tencent CSIG & BMW ADDP Project and Marketing Specialist",
     bullets: [
       "Client Engagement",
-      "Project coordination and strategic execution",
-      "Visual production and brand delivery",
+      "Project Coordination and Strategic Execution",
+      "Visual Production and Brand Delivery",
     ],
   },
   {
