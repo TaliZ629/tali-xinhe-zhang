@@ -14,8 +14,8 @@ const technicalExp: ExpItem[] = [
     role: "Operations Analyst",
     bullets: [
       "Cost Optimization",
-      "Risk control through process execution",
-      "Cross-Regional and cross functional Coordination",
+      "Risk Control through Process Execution",
+      "Cross-Regional and Cross Functional Coordination",
     ],
   },
   {
@@ -24,9 +24,9 @@ const technicalExp: ExpItem[] = [
     location: "Shanghai, China",
     role: "Customer Support Operations Analyst",
     bullets: [
-      "Weekly Performance Reporting/dashboards/presentation",
-      "Problem identification and root cause analysis",
-      "Improvement execution on Platform IT Service Operations",
+      "Weekly Performance Reporting with Dashboards and Presentation",
+      "Problem Identification and Root Cause Analysis",
+      "Improvement Execution on Platform IT Service Operations",
     ],
   },
   {
@@ -35,8 +35,8 @@ const technicalExp: ExpItem[] = [
     location: "Guangzhou, China",
     role: "Intellectual Property Case Consultant",
     bullets: [
-      "Comprehensive investigative research",
-      "Case assessment and strategic planning",
+      "Comprehensive Investigative Research",
+      "Case Assessment and Strategic Planning",
       "Intellectual Property Enforcement Support",
     ],
   },
@@ -50,8 +50,8 @@ const mediaExp: ExpItem[] = [
     role: "Tencent CSIG & BMW ADDP Project and Marketing Specialist",
     bullets: [
       "Client Engagement",
-      "Project coordination and strategic execution",
-      "Visual production and brand delivery",
+      "Project Coordination and Strategic Execution",
+      "Visual Production and Brand Delivery",
     ],
   },
   {
@@ -82,7 +82,7 @@ const mediaExp: ExpItem[] = [
     location: "Santa Fe Springs, CA",
     role: "Digital Content Editor",
     bullets: [
-      "Effective client coordination",
+      "Effective Client Coordination",
       "Technical Design Operations",
       "Output Quality Control",
     ],
