@@ -14,8 +14,8 @@ const technicalExp: ExpItem[] = [
     role: "Operations Analyst",
     bullets: [
       "Cost Optimization",
-      "Risk control through process execution",
-      "Cross-Regional and cross functional Coordination",
+      "Risk Control through Process Execution",
+      "Cross-Regional and Cross Functional Coordination",
     ],
   },
   {
