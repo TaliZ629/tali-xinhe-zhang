@@ -25,7 +25,7 @@ const volunteerExperiences: VolunteerExp[] = [
     role: "Volunteer Storyteller & Community Outreach Participant",
     subtitle: "A Storytelling Session in the Elementary School Community Outreach Program for Left-Behind Children",
     bullets: [
-      "Facilitated an interactive storytelling activity for left-behind children during a school outreach visit, encouraging curiosity, discussion, and connection through a fascinating story How to Make an Apple Pie and See the World",
+      "Facilitated an interactive storytelling class for left-behind children during a school outreach visit, encouraging curiosity, discussion, and connection through a fascinating story How to Make an Apple Pie and See the World.",
     ],
     media: { type: "image", src: volunteerOutreach, alt: "Community Outreach Program storytelling session" },
   },
@@ -58,7 +58,7 @@ const volunteerExperiences: VolunteerExp[] = [
     role: "Media & Broadcasting Assistant",
     subtitle: "13th Chinese Returned Scholars Innovation & Entrepreneurship Forum — Beijing Forum of WRSA",
     bullets: [
-      "Selected as one of 18 volunteers from an international pool of 14,000 applicants for the largest annual WRSA conference, with 800+ attendees and 50+ leading executives, entrepreneurs, and scholars",
+      "Selected as one of 18 volunteers from a global pool of 14,000 applicants, I served as a Media and Broadcasting Assistant for this conference in Beijing, coordinating onsite communications and resource distribution for 50+ high-profile executives and 800 attendees while supporting coverage across major outlets including CCTV and China Daily.",
     ],
     media: { type: "image", src: volunteerWrsa, alt: "WRSA & CCG Beijing Forum volunteer group photo" },
   },
