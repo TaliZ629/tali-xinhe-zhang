@@ -5,7 +5,7 @@ const AboutSection = () => (
     <SectionHeader label="01 — About" title={<>Strategy Meets<br /><em>Execution</em></>} section="about" />
     <div className="max-w-[720px] space-y-5">
       <p className="text-[0.95rem] text-medium leading-[1.85]">
-        I'm Tali Zhang, a cross-functional professional with experience across operations, marketing, data analytics, and media content creation — bridging Western and Chinese markets with bilingual fluency and a global mindset. I bring a unique blend of analytical thinking and creative execution. Whether optimizing budget plans, reducing purchase risks, producing corporate videos, or growing social media channels across platforms, I approach every challenge with curiosity and rigor.
+        I'm Tali Zhang, a cross-functional professional with a global mindset and experience across operations, marketing, data analytics, media content creation and business strategies. I bring a unique blend of analytical thinking and creative execution. Whether optimizing budget plans, reducing purchase risks, producing corporate videos, or growing social media channels across platforms, I approach every challenge with curiosity and rigor.
       </p>
     </div>
   </section>
