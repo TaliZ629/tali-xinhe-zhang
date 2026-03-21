@@ -36,8 +36,7 @@ const volunteerExperiences: VolunteerExp[] = [
     role: "Post-Production Editor / Event Production Assistant",
     subtitle: "TEDxTurtleRock: Ideas Unchained",
     bullets: [
-      "Edited TEDx TurtleRock event videos and assisted the organizer in designing the event setup and activities",
-      "Created digital and print materials including posters, flyers, presentations, and motion graphics",
+      "Produced video content and designed visual materials for TEDx TurtleRock, supporting event setup, audience activities, and brand-consistent communication across digital and print formats",
     ],
     media: { type: "image", src: volunteerTedx, alt: "TEDxTurtleRock: Ideas Unchained group photo" },
   },
