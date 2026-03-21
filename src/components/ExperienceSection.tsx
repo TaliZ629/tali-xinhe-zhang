@@ -35,8 +35,8 @@ const technicalExp: ExpItem[] = [
     location: "Guangzhou, China",
     role: "Intellectual Property Case Consultant",
     bullets: [
-      "Comprehensive investigative research",
-      "Case assessment and strategic planning",
+      "Comprehensive Investigative Research",
+      "Case Assessment and Strategic Planning",
       "Intellectual Property Enforcement Support",
     ],
   },
