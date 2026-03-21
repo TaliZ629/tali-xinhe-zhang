@@ -6,6 +6,7 @@ import { MessageCircle, ChevronDown, ChevronUp } from "lucide-react";
 
 interface Comment {
   id: string;
+  author_name: string;
   content: string;
   created_at: string;
 }
