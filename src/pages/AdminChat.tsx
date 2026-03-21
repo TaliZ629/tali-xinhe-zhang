@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { Send } from "lucide-react";
+import { useAdminNotifications } from "@/hooks/use-admin-notifications";
 
 interface Conversation {
   id: string;
@@ -25,6 +26,7 @@ const AdminChat = () => {
   const [reply, setReply] = useState("");
   const [sending, setSending] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
+  useAdminNotifications();
 
   // Fetch conversations
   useEffect(() => {
