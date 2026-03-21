@@ -150,6 +150,7 @@ export const CommentsContent = () => {
           {comments.map((c) => (
             <div key={c.id} className="border border-border rounded-sm px-4 py-3 bg-card">
               <div className="flex justify-between items-baseline mb-0.5">
+                <span className="text-[0.75rem] font-medium text-deep">{c.author_name}</span>
                 <span className="text-[0.65rem] text-light-text">{timeAgo(c.created_at)}</span>
               </div>
               <p className="text-[0.8rem] text-medium leading-relaxed">{c.content}</p>
