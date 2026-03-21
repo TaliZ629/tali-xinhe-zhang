@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { Send } from "lucide-react";
+import { useAdminNotifications } from "@/hooks/use-admin-notifications";
 
 interface Conversation {
   id: string;
