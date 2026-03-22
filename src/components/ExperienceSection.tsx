@@ -33,7 +33,7 @@ const technicalExp: ExpItem[] = [
     date: "05/2020 – 06/2021",
     company: "Cheering Consulting",
     location: "Guangzhou, China",
-    role: "Intellectual Property Case Consultant",
+    role: "Intellectual Property Projects & Client Coordination Consultant",
     bullets: [
       "Comprehensive Investigative Research",
       "Case Assessment and Strategic Planning",
